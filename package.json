@@ -4,10 +4,12 @@
   "private": true,
   "homepage": "https://AbdullahKaratas.github.io/bob-salon-landing-page",
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "anix": "^1.3.6",
+    "emailjs-com": "^3.2.0",
     "jquery": "^3.6.0",
     "particles-bg": "^2.5.5",
     "react": "^17.0.1",
