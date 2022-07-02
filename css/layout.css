@@ -863,8 +863,8 @@ call-to-action .button {
 #contact button.submit {
 	text-transform: uppercase;
 	letter-spacing: 3px;
-	color:#fff;
-   background: #0D0D0D;
+	color:rgb(2, 2, 2);
+   background: #c4f7d0;
 	border: none;
    cursor: pointer;
    height: auto;
