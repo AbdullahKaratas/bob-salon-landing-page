@@ -5,6 +5,9 @@
   "homepage": "https://AbdullahKaratas.github.io/bob-salon-landing-page",
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/material": "^5.8.6",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -15,8 +18,10 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-ga": "^3.3.0",
+    "react-hot-toast": "^2.2.0",
     "react-reveal": "^1.2.2",
     "react-scripts": "4.0.3",
+    "react-toastify": "^9.0.5",
     "react-zmage": "^0.8.5-beta.36",
     "web-vitals": "^1.0.1"
   },
