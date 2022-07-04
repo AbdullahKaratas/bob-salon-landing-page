@@ -1,44 +1,24 @@
 import React, { Component } from "react";
-import Zmage from "react-zmage";
-import Fade from "react-reveal";
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/styles.css';
+import hand from "../images/hand.jpg"
+import innerPlace from "../images/innerplace.jpg"
+import lights from "../images/lights.jpg"
+import green from "../images/green.jpg"
 
-let id = 0;
-class Portfolio extends Component {
+class Slider extends Component {
   render() {
-    if (!this.props.data) return null;
-
-    const projects = this.props.data.projects.map(function (projects) {
-      let projectImage = "images/portfolio/" + projects.image;
-
-      return (
-        <div key={id++} className="columns portfolio-item">
-          <div className="item-wrap">
-            <Zmage alt={projects.title} src={projectImage} />
-            <div style={{ textAlign: "center" }}>{projects.title}</div>
-          </div>
-        </div>
-      );
-    });
-
     return (
       <section id="portfolio">
-        <Fade left duration={1000} distance="40px">
-          <div className="row">
-            <div className="twelve columns collapsed">
-              <h1>Reservierung.</h1>
-
-              <div
-                id="portfolio-wrapper"
-                className="bgrid-quarters s-bgrid-thirds cf"
-              >
-                {projects}
-              </div>
-            </div>
-          </div>
-        </Fade>
+        <AwesomeSlider bullets={false} >
+          <div data-src= {hand} style={{maxHeight: '1200px'}}/>
+          <div data-src={innerPlace} style={{maxHeight: '1200px'}}/>
+          <div data-src={lights} style={{maxHeight: '1200px'}}/>
+          <div data-src={green} style={{maxHeight: '1200px'}}/>
+        </AwesomeSlider>
       </section>
     );
   }
 }
 
-export default Portfolio;
+export default Slider;

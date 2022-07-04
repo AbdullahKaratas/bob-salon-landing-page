@@ -1,38 +1,19 @@
-// https://www.npmjs.com/package/react-responsive-carousel
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Carousel = require('react-responsive-carousel').Carousel;
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/custom-animations/cube-animation.css';
+import hand from "../images/hand.jpg"
+import innerPlace from "../images/innerPlace.jpg"
+import lights from "../images/lights.jpg"
+import green from "../images/green.jpg"
 
-var DemoCarousel = React.createClass({
-    render() {
-        return (
-            <Carousel showArrows={true} onChange={onChange} onClickItem={onClickItem} onClickThumb={onClickThumb}>
-                <div>
-                    <img src="assets/1.jpeg" />
-                    <p className="legend">Legend 1</p>
-                </div>
-                <div>
-                    <img src="assets/2.jpeg" />
-                    <p className="legend">Legend 2</p>
-                </div>
-                <div>
-                    <img src="assets/3.jpeg" />
-                    <p className="legend">Legend 3</p>
-                </div>
-                <div>
-                    <img src="assets/4.jpeg" />
-                    <p className="legend">Legend 4</p>
-                </div>
-                <div>
-                    <img src="assets/5.jpeg" />
-                    <p className="legend">Legend 5</p>
-                </div>
-                <div>
-                    <img src="assets/6.jpeg" />
-                    <p className="legend">Legend 6</p>
-                </div>
-            </Carousel>
-        );
-    }
-});
-ReactDOM.render(<DemoCarousel />, document.querySelector('.demo-carousel'));
+const Slider = (
+  <section id="portfolio">
+    <AwesomeSlider animation="cubeAnimation">
+      <div data-src= `url(${hand})` />
+      <div data-src="/path/to/image-1.png" />
+      <div data-src="/path/to/image-2.jpg" />
+    </AwesomeSlider>
+  </section>
+
+);
+
+export default Slider;

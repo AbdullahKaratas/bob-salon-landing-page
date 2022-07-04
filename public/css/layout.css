@@ -412,9 +412,6 @@ ul#nav li.current a { color: #ffffff; }
 /* ------------------------------------------------------------------ */
 
 #portfolio {
-   background: #ebeeee;
-   padding-top: 90px;
-   padding-bottom: 60px;
 }
 #portfolio h1 {
    font: 15px/24px 'opensans-semibold', sans-serif;

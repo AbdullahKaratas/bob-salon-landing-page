@@ -43,11 +43,11 @@ class Header extends Component {
                     </a>
                   </li>
 
-                  {/* <li>
+                  <li>
                     <a className="smoothscroll" href="#portfolio">
-                      Reservierung
+                      Gallerie
                     </a>
-                  </li> */}
+                  </li>
 
                   <li>
                     <a className="smoothscroll" href="#contact">
@@ -97,11 +97,11 @@ class Header extends Component {
                     </a>
                   </li>
 
-                  {/* <li>
+                  <li>
                     <a className="smoothscroll" href="#portfolio">
-                      Reservierung
+                      Gallerie
                     </a>
-                  </li> */}
+                  </li>
 
                   <li>
                     <a className="smoothscroll" href="#contact">
