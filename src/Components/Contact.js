@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { Fade, Slide } from "react-reveal";
 import emailjs from '@emailjs/browser';
-import toast, { Toaster } from 'react-hot-toast';
+import Alert from '@mui/material/Alert';
+import AlertTitle from '@mui/material/AlertTitle';
+import CircularProgress from '@mui/material/CircularProgress';
 
 
 class Contact extends Component {
@@ -10,20 +12,32 @@ class Contact extends Component {
     super(props);
     this.form = React.createRef();
     this.state = {
-      open: false
+      open: false,
+      loading: 2
     }
   }
 
-  notify = () => toast('Die Email ist angekommen.');
-
+  sleep = (milliseconds) => {
+    return new Promise(resolve => setTimeout(resolve, milliseconds))
+}
 
   sendEmail = (e) => {
+    this.setState({
+      loading: 0
+    })
     this.state.open = true;
     e.preventDefault();
 
     emailjs.sendForm('service_rauforg', 'template_2fas96o', this.form.current, 'JF-5rSuh1c219hUzS')
       .then((result) => {
-        this.notify()
+        this.setState({
+          loading: 1
+        })
+        this.sleep(2000).then(r => {
+          this.setState({
+            loading: 2
+          })
+        })
         // <Snackbar open={this.state.open} autoHideDuration={6000} message="Email gesendet" />
       }, (error) => {
           console.log(error.text);
@@ -36,6 +50,12 @@ class Contact extends Component {
 
   handleClose = () => {
     this.state.open = false;
+  };
+
+  handleClickLoading = () => {
+    this.setState({
+      loading: !this.state.loading
+    })
   };
   
   render() {
@@ -74,42 +94,35 @@ class Contact extends Component {
                   <input type="email" name="from_email" />
                 <label>Message</label>
                   <textarea name="message" />
-                <button className="submit" type="submit">Senden</button>
-                <Toaster
-                position="bottom-center"
-                reverseOrder={false}
-                gutter={8}
-                containerClassName=""
-                containerStyle={{}}
-                toastOptions={{
-                  // Define default options
-                  className: '',
-                  duration: 5000,
-                  style: {
-                    background: '#3fd63a',
-                    color: '#fff',
-                  },
-                }}
-              />
+                    {
+                        this.state.loading == 0 ? 
+                        <div style={{marginLeft: '27%'}}>
+                          <CircularProgress/> 
+                        </div> 
+                        : this.state.loading == 1 ?
+                        <div style={{marginLeft: '27%'}}>
+                          <Alert variant="filled" severity="success" style={{background: '#c4f7d0', color: '#000000'}}>
+                            <AlertTitle style={{fontSize: '15px'}}>Nachricht gesendet</AlertTitle>
+                          </Alert>
+                        </div> 
+                        : 
+                        <button className="submit" type="submit">
+                          Senden
+                        </button>
+                    }
               </form>
-
-              <div id="message-warning"> Error boy</div>
-              <div id="message-success">
-                <i className="fa fa-check"></i>Your message was sent, thank you!
-                <br />
-              </div>
             </div>
           </Slide>
 
           <Slide right duration={1000}>
             <aside className="four columns footer-widgets">
               <div className="widget widget_contact">
-                <h4>Address and Phone</h4>
+                <h4>Anschrift und Telefon</h4>
                 <p className="address">
                   {name}
                   <br />
                   {street} <br />
-                  {city}, {state} {zip}
+                  {zip} {city}, {state} 
                   <br />
                   <span>{phone}</span>
                 </p>

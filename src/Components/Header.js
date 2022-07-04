@@ -1,94 +1,124 @@
 import React, { Component } from "react";
-import ParticlesBg from "particles-bg";
-import Fade from "react-reveal";
 import hmeImg from "../images/home.jpg"
-
+import hmeImgMobil from "../images/home2.jpg"
+import MediaQuery from 'react-responsive'
 
 class Header extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const project = this.props.data.project;
-    const github = this.props.data.github;
-    const name = this.props.data.name;
-    const description = this.props.data.description;
-
     return (
-      <header id="home" style={{ backgroundImage: `url(${hmeImg})`,
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-      backgroundSize: 'cover'}} >
-        {/* <ParticlesBg type="circle" bg={true} /> */}
+      <div>
+        <MediaQuery maxWidth={1224}>
+          <header id="home" style={{ backgroundImage: `url(${hmeImgMobil})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover'}} >
+              {/* <ParticlesBg type="circle" bg={true} /> */}
 
-        <nav id="nav-wrap">
-          <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
-            Show navigation
-          </a>
-          <a className="mobile-btn" href="#home" title="Hide navigation">
-            Hide navigation
-          </a>
-
-          <ul id="nav" className="nav">
-            <li className="current">
-              <a className="smoothscroll" href="#home">
-                Home
-              </a>
-            </li>
-
-            <li>
-              <a className="smoothscroll" href="#about">
-                Über bob-salon
-              </a>
-            </li>
-
-            <li>
-              <a className="smoothscroll" href="#resume">
-                Preisliste
-              </a>
-            </li>
-
-            {/* <li>
-              <a className="smoothscroll" href="#portfolio">
-                Reservierung
-              </a>
-            </li> */}
-
-            <li>
-              <a className="smoothscroll" href="#contact">
-                Kontakt
-              </a>
-            </li>
-          </ul>
-        </nav>
-
-        {/* <div className="row banner">
-          <div className="banner-text">
-            <Fade bottom>
-              <h1 className="responsive-headline">{name}</h1>
-            </Fade>
-            <Fade bottom duration={1200}>
-              <h3>{description}.</h3>
-            </Fade>
-            <hr />
-            <Fade bottom duration={2000}>
-              <ul className="social">
-                <a href={project} className="button btn project-btn">
-                  <i className="fa fa-book"></i>Reservierung
+              <nav id="nav-wrap">
+                <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
+                  Show navigation
                 </a>
-                <a href={github} className="button btn github-btn">
-                  <i className="fa fa-github"></i>Kontakt
+                <a className="mobile-btn" href="#home" title="Hide navigation">
+                  Hide navigation
                 </a>
-              </ul>
-            </Fade>
-          </div>
-        </div> */}
 
-        <p className="scrolldown">
-          <a className="smoothscroll" href="#about">
-            <i className="icon-down-circle"></i>
-          </a>
-        </p>
-      </header>
+                <ul id="nav" className="nav">
+                  <li className="current">
+                    <a className="smoothscroll" href="#home">
+                      Home
+                    </a>
+                  </li>
+
+                  <li>
+                    <a className="smoothscroll" href="#about">
+                      Über bob-salon
+                    </a>
+                  </li>
+
+                  <li>
+                    <a className="smoothscroll" href="#resume">
+                      Preisliste
+                    </a>
+                  </li>
+
+                  {/* <li>
+                    <a className="smoothscroll" href="#portfolio">
+                      Reservierung
+                    </a>
+                  </li> */}
+
+                  <li>
+                    <a className="smoothscroll" href="#contact">
+                      Kontakt
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <p className="scrolldown">
+                <a className="smoothscroll" href="#about">
+                  <i className="icon-down-circle"></i>
+                </a>
+              </p>
+            </header>
+        </MediaQuery>
+        <MediaQuery minWidth={1224}>
+        <header id="home" style={{ backgroundImage: `url(${hmeImg})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover'}} >
+              {/* <ParticlesBg type="circle" bg={true} /> */}
+
+              <nav id="nav-wrap">
+                <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
+                  Show navigation
+                </a>
+                <a className="mobile-btn" href="#home" title="Hide navigation">
+                  Hide navigation
+                </a>
+
+                <ul id="nav" className="nav">
+                  <li className="current">
+                    <a className="smoothscroll" href="#home">
+                      Home
+                    </a>
+                  </li>
+
+                  <li>
+                    <a className="smoothscroll" href="#about">
+                      Über bob-salon
+                    </a>
+                  </li>
+
+                  <li>
+                    <a className="smoothscroll" href="#resume">
+                      Preisliste
+                    </a>
+                  </li>
+
+                  {/* <li>
+                    <a className="smoothscroll" href="#portfolio">
+                      Reservierung
+                    </a>
+                  </li> */}
+
+                  <li>
+                    <a className="smoothscroll" href="#contact">
+                      Kontakt
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+
+              <p className="scrolldown">
+                <a className="smoothscroll" href="#about">
+                  <i className="icon-down-circle"></i>
+                </a>
+              </p>
+            </header>
+        </MediaQuery>
+      </div>
     );
   }
 }
