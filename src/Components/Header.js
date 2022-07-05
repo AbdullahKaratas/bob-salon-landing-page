@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import hmeImg from "../images/home.jpg"
-import hmeImgMobil from "../images/home2.jpg"
+import hmeImgMobil from "../images/hmgImgMobilCut.png"
 import MediaQuery from 'react-responsive'
 
 class Header extends Component {
@@ -33,7 +33,7 @@ class Header extends Component {
 
                   <li>
                     <a className="smoothscroll" href="#about">
-                      Über bob-salon
+                      über bob-salon
                     </a>
                   </li>
 
@@ -87,7 +87,7 @@ class Header extends Component {
 
                   <li>
                     <a className="smoothscroll" href="#about">
-                      Über bob-salon
+                      über bob-salon
                     </a>
                   </li>
 

@@ -14,13 +14,13 @@ class Resume extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const skillmessage = this.props.data.skillmessage;
+    const skillmessage = this.props.data.skillmessage.toLowerCase();
     const leistungen = this.props.data.leistungen.map(function (leistung) {
       return (
-        <div key={leistung.leistung}>
+        <div key={leistung.leistung.toLowerCase()}>
           <p className="info">
-          {leistung.leistung}<span>&bull;</span>
-            <em className="date">{leistung.preis}</em>
+          {leistung.leistung.toLowerCase()}<span>&bull;</span>
+            <em className="date">{leistung.preis.toLowerCase()}</em>
           </p>
         </div>
       );
@@ -28,10 +28,10 @@ class Resume extends Component {
 
     const paintings = this.props.data.paintings.map(function (painting) {
       return (
-        <div key={painting.leistung}>
+        <div key={painting.leistung.toLowerCase()}>
           <p className="info">
-          {painting.leistung}<span>&bull;</span>
-            <em className="date">{painting.preis}</em>
+          {painting.leistung.toLowerCase()}<span>&bull;</span>
+            <em className="date">{painting.preis.toLowerCase()}</em>
           </p>
         </div>
       );
@@ -39,10 +39,10 @@ class Resume extends Component {
 
     const elsecases = this.props.data.elsecases.map((elsecase) => {
       return (
-        <div key={elsecase.leistung}>
+        <div key={elsecase.leistung.toLowerCase()}>
           <p className="info">
-          {elsecase.leistung}<span>&bull;</span>
-            <em className="date">{elsecase.preis}</em>
+          {elsecase.leistung.toLowerCase()}<span>&bull;</span>
+            <em className="date">{elsecase.preis.toLowerCase()}</em>
           </p>
         </div>
       );
@@ -54,7 +54,7 @@ class Resume extends Component {
           <div className="row education">
             <div className="three columns header-col">
               <h1>
-                <span>Haarschnitt</span>
+                <span>haarschnitt</span>
               </h1>
             </div>
 
@@ -70,7 +70,7 @@ class Resume extends Component {
           <div className="row work">
             <div className="three columns header-col">
               <h1>
-                <span>Färben</span>
+                <span>färben</span>
               </h1>
             </div>
 
@@ -82,7 +82,7 @@ class Resume extends Component {
           <div className="row skill">
             <div className="three columns header-col">
               <h1>
-                <span>Weitere Leistungen</span>
+                <span>weitere leistungen</span>
               </h1>
             </div>
 

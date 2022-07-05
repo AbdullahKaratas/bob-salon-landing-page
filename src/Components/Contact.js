@@ -61,13 +61,13 @@ class Contact extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const name = this.props.data.name;
-    const street = this.props.data.address.street;
-    const city = this.props.data.address.city;
-    const state = this.props.data.address.state;
-    const zip = this.props.data.address.zip;
-    const phone = this.props.data.phone;
-    const message = this.props.data.contactmessage;
+    const name = this.props.data.name.toLowerCase();
+    const street = this.props.data.address.street.toLowerCase();
+    const city = this.props.data.address.city.toLowerCase();
+    const state = this.props.data.address.state.toLowerCase();
+    const zip = this.props.data.address.zip.toLowerCase();
+    const phone = this.props.data.phone.toLowerCase();
+    const message = this.props.data.contactmessage.toLowerCase();
 
     return (
       <section id="contact">
@@ -88,11 +88,11 @@ class Contact extends Component {
           <Slide left duration={1000}>
             <div className="eight columns">
               <form ref={this.form} onSubmit={this.sendEmail}>
-                <label>Name</label>
+                <label>name</label>
                   <input type="text" name="from_name" />
-                <label>Email</label>
+                <label>email</label>
                   <input type="email" name="from_email" />
-                <label>Message</label>
+                <label>nachricht</label>
                   <textarea name="message" />
                     {
                         this.state.loading == 0 ? 
@@ -105,10 +105,27 @@ class Contact extends Component {
                             <AlertTitle style={{fontSize: '15px'}}>Nachricht gesendet</AlertTitle>
                           </Alert>
                         </div> 
-                        : 
-                        <button className="submit" type="submit">
-                          Senden
-                        </button>
+                        :
+                        <div>
+                          <button className="submit" type="submit">
+                            Senden
+                          </button>
+                          <button
+                              className="submit"
+                              type="button"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href='https://www.picktime.com/6769b287-58e1-44c6-92ae-db361d12bc21';
+                                }}
+                          >Reservierung bei bob-salon</button>
+                          {/* <a href="https://www.picktime.com/6769b287-58e1-44c6-92ae-db361d12bc21" 
+                            style={{float: 'none' }}>
+                            <img border="none" 
+                              src="https://www.picktime.com/img/widgetButtons/BookingPage/picktime-book-online-gray.png" 
+                              alt="Reservierung bei bob-salon"/>
+                          </a> */}
+                        </div> 
+                        
                     }
               </form>
             </div>
@@ -117,7 +134,7 @@ class Contact extends Component {
           <Slide right duration={1000}>
             <aside className="four columns footer-widgets">
               <div className="widget widget_contact">
-                <h4>Anschrift und Telefon</h4>
+                <h4>anschrift und telefon</h4>
                 <p className="address">
                   {name}
                   <br />
