@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/bob-salon-landing-page/static/css/main.bab0b925.chunk.css",
-    "main.js": "/bob-salon-landing-page/static/js/main.df99b7ad.chunk.js",
-    "main.js.map": "/bob-salon-landing-page/static/js/main.df99b7ad.chunk.js.map",
+    "main.js": "/bob-salon-landing-page/static/js/main.a08aeb07.chunk.js",
+    "main.js.map": "/bob-salon-landing-page/static/js/main.a08aeb07.chunk.js.map",
     "runtime-main.js": "/bob-salon-landing-page/static/js/runtime-main.3b5266a2.js",
     "runtime-main.js.map": "/bob-salon-landing-page/static/js/runtime-main.3b5266a2.js.map",
     "static/css/2.32073f4d.chunk.css": "/bob-salon-landing-page/static/css/2.32073f4d.chunk.css",
@@ -16,9 +16,9 @@
     "static/js/2.81b0265c.chunk.js.LICENSE.txt": "/bob-salon-landing-page/static/js/2.81b0265c.chunk.js.LICENSE.txt",
     "static/media/aboutbob.6680829e.jpg": "/bob-salon-landing-page/static/media/aboutbob.6680829e.jpg",
     "static/media/green.6b540e24.jpg": "/bob-salon-landing-page/static/media/green.6b540e24.jpg",
-    "static/media/hand.982cd515.jpg": "/bob-salon-landing-page/static/media/hand.982cd515.jpg",
+    "static/media/hand.1fba2aad.jpg": "/bob-salon-landing-page/static/media/hand.1fba2aad.jpg",
+    "static/media/hmgImgMobilCut.baed4ce0.png": "/bob-salon-landing-page/static/media/hmgImgMobilCut.baed4ce0.png",
     "static/media/home.f3917b3b.jpg": "/bob-salon-landing-page/static/media/home.f3917b3b.jpg",
-    "static/media/home2.b9274d7f.jpg": "/bob-salon-landing-page/static/media/home2.b9274d7f.jpg",
     "static/media/innerplace.23076523.jpg": "/bob-salon-landing-page/static/media/innerplace.23076523.jpg",
     "static/media/lights.a764b4c6.jpg": "/bob-salon-landing-page/static/media/lights.a764b4c6.jpg"
   },
@@ -27,6 +27,6 @@
     "static/css/2.32073f4d.chunk.css",
     "static/js/2.81b0265c.chunk.js",
     "static/css/main.bab0b925.chunk.css",
-    "static/js/main.df99b7ad.chunk.js"
+    "static/js/main.a08aeb07.chunk.js"
   ]
 }
