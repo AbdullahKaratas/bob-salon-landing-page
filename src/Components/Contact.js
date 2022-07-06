@@ -130,22 +130,6 @@ class Contact extends Component {
               </form>
             </div>
           </Slide>
-
-          <Slide right duration={1000}>
-            <aside className="four columns footer-widgets">
-              <div className="widget widget_contact">
-                <h4>anschrift und telefon</h4>
-                <p className="address">
-                  {name}
-                  <br />
-                  {street} <br />
-                  {zip} {city}, {state} 
-                  <br />
-                  <span>{phone}</span>
-                </p>
-              </div>
-            </aside>
-          </Slide>
         </div>
       </section>
     );

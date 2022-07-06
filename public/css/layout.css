@@ -841,7 +841,7 @@ call-to-action .button {
 #contact textarea,
 #contact select {
    padding: 10px 20px;
-	color: rgb(0, 0, 0);
+	color: #000;
 	background: #def6e4;
 	margin-bottom: 42px;
 	outline: none;
@@ -855,7 +855,7 @@ call-to-action .button {
 #contact input:focus,
 #contact textarea:focus,
 #contact select:focus {
-	color: #fff;
+	color: #000;
 	background-color: #f7fef9;
 }
 #contact button.submit {
