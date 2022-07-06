@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/bob-salon-landing-page/static/css/main.bab0b925.chunk.css",
-    "main.js": "/bob-salon-landing-page/static/js/main.a08aeb07.chunk.js",
-    "main.js.map": "/bob-salon-landing-page/static/js/main.a08aeb07.chunk.js.map",
+    "main.js": "/bob-salon-landing-page/static/js/main.4310ba37.chunk.js",
+    "main.js.map": "/bob-salon-landing-page/static/js/main.4310ba37.chunk.js.map",
     "runtime-main.js": "/bob-salon-landing-page/static/js/runtime-main.3b5266a2.js",
     "runtime-main.js.map": "/bob-salon-landing-page/static/js/runtime-main.3b5266a2.js.map",
     "static/css/2.32073f4d.chunk.css": "/bob-salon-landing-page/static/css/2.32073f4d.chunk.css",
-    "static/js/2.81b0265c.chunk.js": "/bob-salon-landing-page/static/js/2.81b0265c.chunk.js",
-    "static/js/2.81b0265c.chunk.js.map": "/bob-salon-landing-page/static/js/2.81b0265c.chunk.js.map",
+    "static/js/2.e4c38e37.chunk.js": "/bob-salon-landing-page/static/js/2.e4c38e37.chunk.js",
+    "static/js/2.e4c38e37.chunk.js.map": "/bob-salon-landing-page/static/js/2.e4c38e37.chunk.js.map",
     "static/js/3.7f701c54.chunk.js": "/bob-salon-landing-page/static/js/3.7f701c54.chunk.js",
     "static/js/3.7f701c54.chunk.js.map": "/bob-salon-landing-page/static/js/3.7f701c54.chunk.js.map",
     "index.html": "/bob-salon-landing-page/index.html",
     "static/css/2.32073f4d.chunk.css.map": "/bob-salon-landing-page/static/css/2.32073f4d.chunk.css.map",
     "static/css/main.bab0b925.chunk.css.map": "/bob-salon-landing-page/static/css/main.bab0b925.chunk.css.map",
-    "static/js/2.81b0265c.chunk.js.LICENSE.txt": "/bob-salon-landing-page/static/js/2.81b0265c.chunk.js.LICENSE.txt",
+    "static/js/2.e4c38e37.chunk.js.LICENSE.txt": "/bob-salon-landing-page/static/js/2.e4c38e37.chunk.js.LICENSE.txt",
     "static/media/aboutbob.6680829e.jpg": "/bob-salon-landing-page/static/media/aboutbob.6680829e.jpg",
     "static/media/green.6b540e24.jpg": "/bob-salon-landing-page/static/media/green.6b540e24.jpg",
     "static/media/hand.1fba2aad.jpg": "/bob-salon-landing-page/static/media/hand.1fba2aad.jpg",
@@ -25,8 +25,8 @@
   "entrypoints": [
     "static/js/runtime-main.3b5266a2.js",
     "static/css/2.32073f4d.chunk.css",
-    "static/js/2.81b0265c.chunk.js",
+    "static/js/2.e4c38e37.chunk.js",
     "static/css/main.bab0b925.chunk.css",
-    "static/js/main.a08aeb07.chunk.js"
+    "static/js/main.4310ba37.chunk.js"
   ]
 }
