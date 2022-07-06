@@ -4,7 +4,15 @@ import emailjs from '@emailjs/browser';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import CircularProgress from '@mui/material/CircularProgress';
+import TextField from '@mui/material/TextField';
+import { withStyles } from '@mui/styles';
 
+const styles = theme => ({
+  rootInfo: {
+    width: '20px',
+    marginRight: '20px'
+  },
+});
 
 class Contact extends Component {
 
@@ -59,6 +67,8 @@ class Contact extends Component {
   };
   
   render() {
+    const { classes } = this.props;
+
     if (!this.props.data) return null;
 
     const name = this.props.data.name.toLowerCase();
@@ -89,11 +99,56 @@ class Contact extends Component {
             <div className="eight columns">
               <form ref={this.form} onSubmit={this.sendEmail}>
                 <label>name</label>
-                  <input type="text" name="from_name" />
+                <TextField
+                  margin="normal"
+                  required
+                  fullWidth
+                  id="name"
+                  name="from_name"
+                  autoFocus
+                  sx={{
+                    "& .MuiOutlinedInput-root": {
+                      "& > fieldset": {
+                        border: "none"
+                      }
+                    }
+                  }}
+                  className={classes.rootInfo}
+                />
                 <label>email</label>
-                  <input type="email" name="from_email" />
+                <TextField
+                  margin="normal"
+                  required
+                  fullWidth
+                  id="email"
+                  name="from_email"
+                  autoFocus
+                  sx={{
+                    "& .MuiOutlinedInput-root": {
+                      "& > fieldset": {
+                        border: "none"
+                      }
+                    }
+                  }}
+                />
                 <label>nachricht</label>
-                  <textarea name="message" />
+                  <TextField
+                  margin="normal"
+                  required
+                  id="message"
+                  name="message"
+                  autoFocus
+                  multiline
+                  fullWidth
+                  sx={{
+                    "& .MuiOutlinedInput-root": {
+                      "& > fieldset": {
+                        border: "none"
+                      }
+                    }
+                  }}
+                  // style={{width: '400px'}}
+                  />
                     {
                         this.state.loading == 0 ? 
                         <div style={{marginLeft: '27%'}}>
@@ -118,14 +173,7 @@ class Contact extends Component {
                                 window.location.href='https://www.picktime.com/6769b287-58e1-44c6-92ae-db361d12bc21';
                                 }}
                           >Reservierung bei bob-salon</button>
-                          {/* <a href="https://www.picktime.com/6769b287-58e1-44c6-92ae-db361d12bc21" 
-                            style={{float: 'none' }}>
-                            <img border="none" 
-                              src="https://www.picktime.com/img/widgetButtons/BookingPage/picktime-book-online-gray.png" 
-                              alt="Reservierung bei bob-salon"/>
-                          </a> */}
-                        </div> 
-                        
+                        </div>       
                     }
               </form>
             </div>
@@ -136,4 +184,4 @@ class Contact extends Component {
   }
 }
 
-export default Contact;
+export default withStyles(styles)(Contact);
