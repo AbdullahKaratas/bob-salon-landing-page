@@ -105,7 +105,6 @@ class Contact extends Component {
                   fullWidth
                   id="name"
                   name="from_name"
-                  autoFocus
                   sx={{
                     "& .MuiOutlinedInput-root": {
                       "& > fieldset": {
@@ -122,7 +121,6 @@ class Contact extends Component {
                   fullWidth
                   id="email"
                   name="from_email"
-                  autoFocus
                   sx={{
                     "& .MuiOutlinedInput-root": {
                       "& > fieldset": {
@@ -137,7 +135,6 @@ class Contact extends Component {
                   required
                   id="message"
                   name="message"
-                  autoFocus
                   multiline
                   fullWidth
                   sx={{
@@ -173,7 +170,7 @@ class Contact extends Component {
                                 window.location.href='https://www.picktime.com/6769b287-58e1-44c6-92ae-db361d12bc21';
                                 }}
                           >Reservierung bei bob-salon</button>
-                        </div>       
+                        </div> 
                     }
               </form>
             </div>
