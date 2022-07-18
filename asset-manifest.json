@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/bob-salon-landing-page/static/css/main.bab0b925.chunk.css",
-    "main.js": "/bob-salon-landing-page/static/js/main.3cc9bdd1.chunk.js",
-    "main.js.map": "/bob-salon-landing-page/static/js/main.3cc9bdd1.chunk.js.map",
+    "main.js": "/bob-salon-landing-page/static/js/main.07cd031d.chunk.js",
+    "main.js.map": "/bob-salon-landing-page/static/js/main.07cd031d.chunk.js.map",
     "runtime-main.js": "/bob-salon-landing-page/static/js/runtime-main.a0360413.js",
     "runtime-main.js.map": "/bob-salon-landing-page/static/js/runtime-main.a0360413.js.map",
     "static/css/2.32073f4d.chunk.css": "/bob-salon-landing-page/static/css/2.32073f4d.chunk.css",
@@ -27,6 +27,6 @@
     "static/css/2.32073f4d.chunk.css",
     "static/js/2.654405a3.chunk.js",
     "static/css/main.bab0b925.chunk.css",
-    "static/js/main.3cc9bdd1.chunk.js"
+    "static/js/main.07cd031d.chunk.js"
   ]
 }
