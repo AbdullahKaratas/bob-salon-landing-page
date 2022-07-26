@@ -182,7 +182,7 @@ ul#nav li.current a { color: #ffffff; }
 /* ------------------------------------------------------------------ */
 
 #about {
-   background: #cb99c98e;
+   background: #efdfc6;
    padding-top: 96px;
    padding-bottom: 66px;
    overflow: hidden;
@@ -193,12 +193,12 @@ ul#nav li.current a { color: #ffffff; }
 
 #about h2 {
    font: 22px/30px 'opensans-bold', sans-serif;
-   color: #fff;
+   color: #000;
    margin-bottom: 12px;
 }
 #about p {
    line-height: 30px;
-   color: #ccc;
+   color: #444;
 }
 #about .profile-pic {
    position: relative;
@@ -231,7 +231,7 @@ ul#nav li.current a { color: #ffffff; }
 /* ------------------------------------------------------------------ */
 
 #resume {
-   background: #9f97fc;
+   background: #f3f5cc;
    padding-top: 90px;
    padding-bottom: 72px;
    overflow: hidden;
