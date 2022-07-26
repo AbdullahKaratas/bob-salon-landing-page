@@ -6,6 +6,10 @@ import AlertTitle from '@mui/material/AlertTitle';
 import CircularProgress from '@mui/material/CircularProgress';
 import TextField from '@mui/material/TextField';
 import { withStyles } from '@mui/styles';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+
 
 const styles = theme => ({
   rootInfo: {
@@ -21,7 +25,8 @@ class Contact extends Component {
     this.form = React.createRef();
     this.state = {
       open: false,
-      loading: 2
+      loading: 2,
+      openDialog: false
     }
   }
 
@@ -56,6 +61,18 @@ class Contact extends Component {
     this.state.open = true;
   };
 
+  handleDialogOpen = () => {
+    this.setState({
+      openDialog: true
+    })
+  };
+
+  handleDialogClose = () => {
+    this.setState({
+      openDialog: false
+    })
+  }
+
   handleClose = () => {
     this.state.open = false;
   };
@@ -70,13 +87,6 @@ class Contact extends Component {
     const { classes } = this.props;
 
     if (!this.props.data) return null;
-
-    const name = this.props.data.name.toLowerCase();
-    const street = this.props.data.address.street.toLowerCase();
-    const city = this.props.data.address.city.toLowerCase();
-    const state = this.props.data.address.state.toLowerCase();
-    const zip = this.props.data.address.zip.toLowerCase();
-    const phone = this.props.data.phone.toLowerCase();
     const message = this.props.data.contactmessage.toLowerCase();
 
     return (
@@ -147,11 +157,11 @@ class Contact extends Component {
                   // style={{width: '400px'}}
                   />
                     {
-                        this.state.loading == 0 ? 
+                        this.state.loading === 0 ? 
                         <div style={{marginLeft: '27%'}}>
                           <CircularProgress/> 
                         </div> 
-                        : this.state.loading == 1 ?
+                        : this.state.loading === 1 ?
                         <div style={{marginLeft: '27%'}}>
                           <Alert variant="filled" severity="success" style={{background: '#c4f7d0', color: '#000000'}}>
                             <AlertTitle style={{fontSize: '15px'}}>Nachricht gesendet</AlertTitle>
@@ -169,7 +179,59 @@ class Contact extends Component {
                                 e.preventDefault();
                                 window.location.href='https://www.picktime.com/6769b287-58e1-44c6-92ae-db361d12bc21';
                                 }}
-                          >Reservierung bei bob-salon</button>
+                          >In Page</button>
+                          <button
+                              className="submit"
+                              type="button"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.open('https://www.eTermin.net/abdullahkaratas', '_blank', 'noopener,noreferrer');
+                                }}
+                          >Neuer Tab</button>
+                          <button
+                              className="submit"
+                              type="button"
+                              onClick={this.handleDialogOpen}
+                          >Als Dialog</button>
+                          <Dialog
+                            open={this.state.openDialog}
+                            onClose={this.handleClose}
+                            aria-labelledby="alert-dialog-title"
+                            aria-describedby="alert-dialog-description"
+                            fullWidth
+                            maxWidth={'lg'}
+                          >
+                            <DialogContent>
+                            <iframe id="etifr" src="https://www.eTermin.net/abdullahkaratas" height="1600px" width="100%" scrolling="no" frameborder="0"></iframe><script id="etwidget" src="https://www.etermin.net/js/etwidget.min.js" data-text="Termin%20buchen" data-color="#F45917" data-colortext="#FFFFFF" data-pos="right" data-size="n"></script>
+                            </DialogContent>
+                            <DialogActions>
+                              <button onClick={this.handleDialogClose}>
+                                Abbrechen
+                              </button>
+                            </DialogActions>
+                          </Dialog>
+                          {/* <button
+                              className="submit"
+                              type="button"
+                              onClick={this.handleDialogOpen}
+                          >Reservierung bei bob-salon</button> */}
+                          {/* <Modal
+                            aria-labelledby="transition-modal-title"
+                            aria-describedby="transition-modal-description"
+                            open={this.state.openDialog}
+                            onClose={this.handleClose}
+                            closeAfterTransition
+                            BackdropComponent={Backdrop}
+                            BackdropProps={{
+                              timeout: 500,
+                            }}
+                          >
+                            <Fade in={this.state.openDialog}>
+                              <Box>
+                              <iframe id="etifr" src="https://www.eTermin.net/abdullahkaratas" height="1600px" width="100%" scrolling="no" frameborder="0"></iframe><script id="etwidget" src="https://www.etermin.net/js/etwidget.min.js" data-text="Termin%20buchen" data-color="#F45917" data-colortext="#FFFFFF" data-pos="right" data-size="n"></script>
+                              </Box>
+                            </Fade>
+                          </Modal> */}
                         </div> 
                     }
               </form>

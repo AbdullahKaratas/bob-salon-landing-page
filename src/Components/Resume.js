@@ -14,7 +14,6 @@ class Resume extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const skillmessage = this.props.data.skillmessage.toLowerCase();
     const leistungen = this.props.data.leistungen.map(function (leistung) {
       return (
         <div key={leistung.leistung.toLowerCase()}>
