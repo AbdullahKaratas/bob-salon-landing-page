@@ -99,10 +99,10 @@ class Reservation extends Component {
         <Fade bottom duration={1000}>
           <div className="row">
             <div className="two columns header-col">
-              <h2>Starte deine Reservierung</h2>
+              <h2>Starten Sie Ihre Reservierung</h2>
               <p className="address">
                 <span>
-                  Klicke auf den Button um die Reservierung zu beginnen
+                  Klicken Sie auf den Button, um den Reservierungsvorgang zu starten
                 </span>
                 <br />
               </p>
@@ -138,7 +138,7 @@ class Reservation extends Component {
                 ></iframe>
               </DialogContent>
               <DialogActions>
-                <button onClick={this.handleDialogClose}>Abbrechen</button>
+                <button onClick={this.handleDialogClose}>Beenden</button>
               </DialogActions>
             </Dialog>
           </div>
