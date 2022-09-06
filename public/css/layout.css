@@ -908,6 +908,42 @@ call-to-action .button {
    color: #000000;
 }
 
+#reservation .section-head { margin-bottom: 42px; }
+
+#reservation a, #reservation a:visited  { color: #0762f9; }
+#reservation a:hover, #reservation a:focus { color: #fff; }
+
+#reservation h1 {
+   font: 18px/24px 'opensans-bold', sans-serif;
+   text-transform: lowercase;
+   letter-spacing: 3px;
+   color: #000000;
+   margin-bottom: 6px;
+}
+#reservation h1 span { display: none; }
+#reservation h1:before {
+   font-family: 'FontAwesome';
+   content: "\f0e0";
+	padding-right: 10px;
+	font-size: 72px;
+   line-height: 72px;
+   text-align: left;
+   float: left;
+   color: #000000;
+}
+
+#reservation h4 {
+   font: 16px/24px 'opensans-bold', sans-serif;
+   color: #000000;
+   margin-bottom: 6px;
+}
+#reservation p.lead {
+   font: 18px/36px 'opensans-light', sans-serif;
+   padding-right: 3%;
+}
+#reservation .header-col { padding-top: 6px; }
+
+
 #reservation button.submit {
 	text-transform: lowercase;
 	letter-spacing: 3px;

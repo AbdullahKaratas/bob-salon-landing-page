@@ -97,48 +97,53 @@ class Reservation extends Component {
     return (
       <section id="reservation">
         <Fade bottom duration={1000}>
-        <div className="row">
-                <div >
-                  <h2>Starte deine Reservierung</h2>
-                  <p className="address">
-                    <span>Klicke auf den Button um die Reservierung zu beginnen</span>
-                    <br />
-                  </p>
-                </div>
-              </div>
+          <div className="row">
+            <div className="two columns header-col">
+              <h2>Starte deine Reservierung</h2>
+              <p className="address">
+                <span>
+                  Klicke auf den Button um die Reservierung zu beginnen
+                </span>
+                <br />
+              </p>
+            </div>
+          </div>
         </Fade>
         <div className="row">
-          <button
-            className="submit"
-            type="button"
-            onClick={this.handleDialogOpen}
-          >
-            Öffne Reservierung
-          </button>
-          <Dialog
-            open={this.state.openDialog}
-            onClose={this.handleClose}
-            aria-labelledby="alert-dialog-title"
-            aria-describedby="alert-dialog-description"
-            fullWidth
-            maxWidth={"lg"}
-          >
-            <DialogContent>
-              <iframe
-                id="etifr"
-                title="Reservierung"
-                src="https://BOB.as.me/"
-                height="1600px"
-                width="100%"
-                scrolling="no"
-                frameborder="0"
-              ></iframe>
-            </DialogContent>
-            <DialogActions>
-              <button onClick={this.handleDialogClose}>Abbrechen</button>
-            </DialogActions>
-          </Dialog>
+          <div className="eight columns">
+            <button
+              className="submit"
+              type="button"
+              onClick={this.handleDialogOpen}
+            >
+              Öffne Reservierung
+            </button>
+            <Dialog
+              open={this.state.openDialog}
+              onClose={this.handleClose}
+              aria-labelledby="alert-dialog-title"
+              aria-describedby="alert-dialog-description"
+              fullWidth
+              maxWidth={"lg"}
+            >
+              <DialogContent>
+                <iframe
+                  id="etifr"
+                  title="Reservierung"
+                  src="https://BOB.as.me/"
+                  height="1600px"
+                  width="100%"
+                  scrolling="no"
+                  frameborder="0"
+                ></iframe>
+              </DialogContent>
+              <DialogActions>
+                <button onClick={this.handleDialogClose}>Abbrechen</button>
+              </DialogActions>
+            </Dialog>
+          </div>
         </div>
+        
       </section>
     );
   }
