@@ -1,13 +1,2 @@
-# Run Project
-### 1. Clone the project
-
-### 2. Run the project
-```shell
-npm i
-npm start
-```
-
-### 3. Build
-```shell
-npm run build
-```
+# Run Demo
+[Live Demo](https://abdullahkaratas.github.io/bob-salon-landing-page/)

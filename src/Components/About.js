@@ -23,9 +23,11 @@ class About extends Component {
               <img
                 style={{borderRadius: '12px'}}
                 src={abtImg}
+                alt="aboutImage"
               />
             </div>
             <div className="nine columns main-col">
+              <br/>
               <h2>über bob-salon</h2>
 
               <p>{bio}</p>
