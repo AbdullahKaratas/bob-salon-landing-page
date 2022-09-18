@@ -1,178 +1,192 @@
 {
   "main": {
-    "name":"bob-salon",
-    "description":"",
-    "image":"profilepic.png",
-    "bio":"bob salon ist ein Friseursalon unter der Leitung von Francisco Guerrero Lopera. Meisterbetrieb, Handwerkskunst, Individualität. ",
-    "contactmessage":"Reservierung oder Fragen? Bitte zögern Sie nicht, mich zu kontaktieren.",
+    "name": "bob-salon",
+    "description": "",
+    "image": "profilepic.png",
+    "bio": "bob salon ist ein Friseursalon unter der Leitung von Francisco Guerrero Lopera. Meisterbetrieb, Handwerkskunst, Individualität. ",
+    "contactmessage": "Reservierung oder Fragen? Bitte zögern Sie nicht, mich zu kontaktieren.",
     "email": "mail@bob.salon",
     "phone": "+4962140040880",
-    "github":"https://github.com/nordicgiant2/react-nice-resume",
-    "project":"https://github.com/nordicgiant2/react-nice-resume",
-    "address":{
-      "street":"Keplerstraße 42",
-      "city":"Mannheim",
-      "state":"Baden-Württemberg",
+    "github": "https://github.com/nordicgiant2/react-nice-resume",
+    "project": "https://github.com/nordicgiant2/react-nice-resume",
+    "address": {
+      "street": "Keplerstraße 42",
+      "city": "Mannheim",
+      "state": "Baden-Württemberg",
       "zip": "68165"
     },
     "website": "http://www.timbakerdev.com",
-    "resumedownload":"http://timbakerdev.com",
-    "social":[
+    "resumedownload": "http://timbakerdev.com",
+    "social": [
       {
-        "name":"facebook",
-        "url":"https://github.com/nordicgiant2/react-nice-resume",
-        "className":"fa fa-facebook"
+        "name": "facebook",
+        "url": "https://github.com/nordicgiant2/react-nice-resume",
+        "className": "fa fa-facebook"
       },
       {
-        "name":"twitter",
-        "url":"http://twitter.com",
-        "className":"fa fa-twitter"
+        "name": "twitter",
+        "url": "http://twitter.com",
+        "className": "fa fa-twitter"
       },
       {
-        "name":"linkedin",
-        "url":"https://www.linkedin.com/in/tim-baker-8420009a/",
-        "className":"fa fa-linkedin"
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/tim-baker-8420009a/",
+        "className": "fa fa-linkedin"
       },
       {
-        "name":"instagram",
-        "url":"http://instagram.com/tbaker_x",
-        "className":"fa fa-instagram"
+        "name": "instagram",
+        "url": "http://instagram.com/tbaker_x",
+        "className": "fa fa-instagram"
       },
       {
-        "name":"github",
-        "url":"https://github.com/nordicgiant2/react-nice-resume",
-        "className":"fa fa-github"
+        "name": "github",
+        "url": "https://github.com/nordicgiant2/react-nice-resume",
+        "className": "fa fa-github"
       }
     ]
   },
-  "resume":{
-    "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
-    "leistungen":[
+  "resume": {
+    "skillmessage": "Here you can create a short write-up of your skills to show off to employers",
+    "leistungen": [
       {
-        "leistung":"Damenschnitt inkls Styling",
-        "preis":"65€"
+        "leistung": "Damenschnitt inkls föhnen",
+        "preis": "65€",
+        "dauer": "60 min"
       },
       {
-        "leistung":"Herrenschnitt",
-        "preis":"38€"
-      }
-      ,
-      {
-        "leistung":"Kind (12-16) Jahren",
-        "preis":"25€"
-      }
-    ],
-    "paintings":[
-      {
-        "leistung":"Painting",
-        "preis":"(65-120)€"
+        "leistung": "Herrenschnitt",
+        "preis": "40€",
+        "dauer": "60 min"
       },
       {
-        "leistung":"Ansatz",
-        "preis":"45€"
-      }
-      ,
-      {
-        "leistung":"Strähnen",
-        "preis":"(55-120)€"
+        "leistung": "Kind (12-16) Jahren",
+        "preis": "(30-35)€",
+        "dauer": "60 min"
       }
     ],
-    "elsecases":[
+    "paintings": [
       {
-        "leistung":"Styling",
-        "preis":"35€"
+        "leistung": "Schneiden inkls. Ansatz färben",
+        "preis": "45€",
+        "dauer": "120 min"
       },
       {
-        "leistung":"Global",
-        "preis":"70€"
+        "leistung": "Ansatz",
+        "preis": "45€",
+        "dauer": "120 min"
       },
       {
-        "leistung":"Hochstecken",
-        "preis":"50€"
+        "leistung": "Ansatz inkls. Längen und Spitzen",
+        "preis": "70€",
+        "dauer": "120 min"
       },
       {
-        "leistung":"Augenbraun zupfen",
-        "preis":"8€"
+        "leistung": "Painting",
+        "preis": "(65-120)€",
+        "dauer": "120 min"
       },
       {
-        "leistung":"Augenbraun färben",
-        "preis":"10€"
+        "leistung": "Strähnen",
+        "preis": "(55-120)€",
+        "dauer": "120 min"
+      }
+    ],
+    "elsecases": [
+      {
+        "leistung": "Styling",
+        "preis": "35€",
+        "dauer": "30 min"
+      },
+      {
+        "leistung": "Hochstecken",
+        "preis": "50€",
+        "dauer": "30 min"
+      },
+      {
+        "leistung": "Augenbraun zupfen",
+        "preis": "8€",
+        "dauer": "30 min"
+      },
+      {
+        "leistung": "Augenbraun färben",
+        "preis": "10€",
+        "dauer": "30 min"
       }
     ]
   },
-  "portfolio":{
+  "portfolio": {
     "projects": [
       {
-        "title":"Canadian Wanderlust",
-        "category":"My Travel Blog for my post-university travels",
-        "image":"01.jpg",
-        "url":"https://www.canadianwanderlust.com"
+        "title": "Canadian Wanderlust",
+        "category": "My Travel Blog for my post-university travels",
+        "image": "01.jpg",
+        "url": "https://www.canadianwanderlust.com"
       },
       {
-        "title":"Fury Fighting Gear",
-        "category":"(offline now) A fighting gear company I started",
-        "image":"02.jpg",
-        "url":"http://www.timbakerdev.com"
+        "title": "Fury Fighting Gear",
+        "category": "(offline now) A fighting gear company I started",
+        "image": "02.jpg",
+        "url": "http://www.timbakerdev.com"
       },
       {
-        "title":"Original Thai Food",
-        "category":"Website I built for a restaurant I like in Thailand",
-        "image":"03.jpg",
-        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
+        "title": "Original Thai Food",
+        "category": "Website I built for a restaurant I like in Thailand",
+        "image": "03.jpg",
+        "url": "http://www.timbakerdev.com/originalthaifood.github.io"
       },
       {
-        "title":"Resume Website",
-        "category":"A React based resume website template",
-        "image":"04.jpg",
-        "url":"http://www.timbakerdev.com"
+        "title": "Resume Website",
+        "category": "A React based resume website template",
+        "image": "04.jpg",
+        "url": "http://www.timbakerdev.com"
       },
       {
-        "title":"Smirkspace",
-        "category":"(MVP Only) A React and Meteor based chat University project.",
-        "image":"05.jpg",
-        "url":"http://www.smirkspace.com"
+        "title": "Smirkspace",
+        "category": "(MVP Only) A React and Meteor based chat University project.",
+        "image": "05.jpg",
+        "url": "http://www.smirkspace.com"
       },
       {
-        "title":"Canadian Wanderlust",
-        "category":"My Travel Blog for my post-university travels",
-        "image":"06.jpg",
-        "url":"https://www.canadianwanderlust.com"
+        "title": "Canadian Wanderlust",
+        "category": "My Travel Blog for my post-university travels",
+        "image": "06.jpg",
+        "url": "https://www.canadianwanderlust.com"
       },
       {
-        "title":"Fury Fighting Gear",
-        "category":"(offline now) A fighting gear company I started",
-        "image":"01.jpg",
-        "url":"http://www.timbakerdev.com"
+        "title": "Fury Fighting Gear",
+        "category": "(offline now) A fighting gear company I started",
+        "image": "01.jpg",
+        "url": "http://www.timbakerdev.com"
       },
       {
-        "title":"Original Thai Food",
-        "category":"Website I built for a restaurant I like in Thailand",
-        "image":"02.jpg",
-        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
+        "title": "Original Thai Food",
+        "category": "Website I built for a restaurant I like in Thailand",
+        "image": "02.jpg",
+        "url": "http://www.timbakerdev.com/originalthaifood.github.io"
       },
       {
-        "title":"Original Thai Food",
-        "category":"Website I built for a restaurant I like in Thailand",
-        "image":"03.jpg",
-        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
+        "title": "Original Thai Food",
+        "category": "Website I built for a restaurant I like in Thailand",
+        "image": "03.jpg",
+        "url": "http://www.timbakerdev.com/originalthaifood.github.io"
       },
       {
-        "title":"Resume Website",
-        "category":"A React based resume website template",
-        "image":"04.jpg",
-        "url":"http://www.timbakerdev.com"
+        "title": "Resume Website",
+        "category": "A React based resume website template",
+        "image": "04.jpg",
+        "url": "http://www.timbakerdev.com"
       },
       {
-        "title":"Smirkspace",
-        "category":"(MVP Only) A React and Meteor based chat University project.",
-        "image":"05.jpg",
-        "url":"http://www.smirkspace.com"
+        "title": "Smirkspace",
+        "category": "(MVP Only) A React and Meteor based chat University project.",
+        "image": "05.jpg",
+        "url": "http://www.smirkspace.com"
       },
       {
-        "title":"Canadian Wanderlust",
-        "category":"My Travel Blog for my post-university travels",
-        "image":"06.jpg",
-        "url":"https://www.canadianwanderlust.com"
+        "title": "Canadian Wanderlust",
+        "category": "My Travel Blog for my post-university travels",
+        "image": "06.jpg",
+        "url": "https://www.canadianwanderlust.com"
       }
     ]
   }
