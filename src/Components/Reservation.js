@@ -99,10 +99,10 @@ class Reservation extends Component {
         <Fade bottom duration={1000}>
           <div className="row">
             <div className="two columns header-col">
-              <h2>Starten Sie Ihre Reservierung</h2>
+              <h2>starten Sie ihre Reservierung</h2>
               <p className="address">
                 <span>
-                  Klicken Sie auf den Button, um den Reservierungsvorgang zu starten
+                  klicken Sie auf den button, um den reservierungsvorgang zu starten
                 </span>
                 <br />
               </p>
