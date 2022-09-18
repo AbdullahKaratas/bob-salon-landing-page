@@ -116,7 +116,7 @@ class Reservation extends Component {
               type="button"
               onClick={this.handleDialogOpen}
             >
-              Öffne Reservierung
+              öffne Reservierung
             </button>
             <Dialog
               open={this.state.openDialog}
@@ -138,7 +138,7 @@ class Reservation extends Component {
                 ></iframe>
               </DialogContent>
               <DialogActions>
-                <button onClick={this.handleDialogClose}>Beenden</button>
+                <button onClick={this.handleDialogClose}>beenden</button>
               </DialogActions>
             </Dialog>
           </div>
