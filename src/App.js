@@ -8,7 +8,6 @@ import About from "./Components/About";
 import Resume from "./Components/Resume";
 import Contact from "./Components/Contact";
 import Portfolio from "./Components/Portfolio";
-import Reservation from "./Components/Reservation";
 
 class App extends Component {
   constructor(props) {
@@ -50,7 +49,6 @@ class App extends Component {
         {/* <Slider /> */}
         <Portfolio />
         <Contact data={this.state.resumeData.main} />
-        <Reservation data={this.state.resumeData.main} />
         <Footer data={this.state.resumeData.main} />
       </div>
     );

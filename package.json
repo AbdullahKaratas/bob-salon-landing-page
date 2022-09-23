@@ -2,7 +2,6 @@
   "name": "reactniceresume",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://AbdullahKaratas.github.io/bob-salon-landing-page",
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
     "@emotion/react": "^11.9.3",

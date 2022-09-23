@@ -54,11 +54,6 @@ class Header extends Component {
                       Kontakt
                     </a>
                   </li>
-                  <li>
-                    <a className="smoothscroll" href="#reservation">
-                      Reservierung
-                    </a>
-                  </li>
                 </ul>
               </nav>
               <p className="scrolldown">
@@ -111,11 +106,6 @@ class Header extends Component {
                   <li>
                     <a className="smoothscroll" href="#contact">
                       Kontakt
-                    </a>
-                  </li>
-                  <li>
-                    <a className="smoothscroll" href="#reservation">
-                      Reservierung
                     </a>
                   </li>
                 </ul>
