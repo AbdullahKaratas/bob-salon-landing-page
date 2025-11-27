@@ -45,7 +45,7 @@ class Header extends Component {
 
                   <li>
                     <a className="smoothscroll" href="#portfolio">
-                      Gallerie
+                      Galerie
                     </a>
                   </li>
 
@@ -99,7 +99,7 @@ class Header extends Component {
 
                   <li>
                     <a className="smoothscroll" href="#portfolio">
-                      Gallerie
+                      Galerie
                     </a>
                   </li>
 

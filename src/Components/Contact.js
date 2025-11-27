@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Fade, Slide } from "react-reveal";
+import Fade from "react-reveal";
 import emailjs from "@emailjs/browser";
 import Alert from "@mui/material/Alert";
 import AlertTitle from "@mui/material/AlertTitle";
@@ -101,7 +101,7 @@ class Contact extends Component {
 
     return (
       <section id="contact">
-        <Fade bottom duration={1000}>
+        <Fade duration={600}>
           <div className="row section-head">
             <div className="two columns header-col">
               <h1>
@@ -114,7 +114,7 @@ class Contact extends Component {
           </div>
         </Fade>
             <div className="row">
-              <Slide left duration={1000}>
+              <Fade duration={600} delay={100}>
                 <div className="eight columns">
                   <form ref={this.form} onSubmit={this.sendEmail}>
                     <label>name</label>
@@ -174,7 +174,7 @@ class Contact extends Component {
                         <Alert
                           variant="filled"
                           severity="success"
-                          style={{ background: "#f7e6c4", color: "#000000" }}
+                          style={{ background: "#c9a962", color: "#1a3a2f" }}
                         >
                           <AlertTitle style={{ fontSize: "15px" }}>
                             Nachricht gesendet
@@ -190,7 +190,7 @@ class Contact extends Component {
                     )}
                   </form>
                 </div>
-              </Slide>
+              </Fade>
             </div>
       </section>
     );

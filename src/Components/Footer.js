@@ -8,7 +8,7 @@ class Footer extends Component {
     return (
       <footer>
         <div className="row">
-          <Fade bottom>
+          <Fade duration={600}>
             <div className="twelve columns">
               <ul className="copyright">
                 <li>&copy; copyright 2022 bob-salon</li>

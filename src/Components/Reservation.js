@@ -96,7 +96,7 @@ class Reservation extends Component {
     if (!this.props.data) return null;
     return (
       <section id="reservation">
-        <Fade bottom duration={1000}>
+        <Fade duration={600}>
           <div className="row">
             <div className="two columns header-col">
               <h2>starten Sie ihre Reservierung</h2>
