@@ -33,3 +33,9 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./build/
           server-dir: /
+          dangerous-clean-slate: true
+          exclude: |
+            **/htdocs/**
+            **/httpdocs/**
+            **/logs/**
+            **/build/**
