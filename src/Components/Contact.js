@@ -59,6 +59,14 @@ class Contact extends Component {
         },
         (error) => {
           console.log(error.text);
+          this.setState({
+            loading: 3,
+          });
+          this.sleep(4000).then((r) => {
+            this.setState({
+              loading: 2,
+            });
+          });
         }
       );
   };
@@ -178,6 +186,15 @@ class Contact extends Component {
                         >
                           <AlertTitle style={{ fontSize: "15px" }}>
                             Nachricht gesendet
+                          </AlertTitle>
+                        </Alert>
+                      </div>
+                    ) : this.state.loading === 3 ? (
+                      <div style={{ marginLeft: "27%" }}>
+                        <Alert variant="filled" severity="error">
+                          <AlertTitle style={{ fontSize: "15px" }}>
+                            Senden fehlgeschlagen — bitte erneut versuchen oder
+                            direkt an mail@bob.salon schreiben.
                           </AlertTitle>
                         </Alert>
                       </div>
