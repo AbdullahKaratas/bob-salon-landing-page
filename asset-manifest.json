@@ -1,32 +1,22 @@
 {
   "files": {
-    "main.css": "/bob-salon-landing-page/static/css/main.bab0b925.chunk.css",
-    "main.js": "/bob-salon-landing-page/static/js/main.80e0fc8d.chunk.js",
-    "main.js.map": "/bob-salon-landing-page/static/js/main.80e0fc8d.chunk.js.map",
-    "runtime-main.js": "/bob-salon-landing-page/static/js/runtime-main.c0ecdc63.js",
-    "runtime-main.js.map": "/bob-salon-landing-page/static/js/runtime-main.c0ecdc63.js.map",
-    "static/css/2.32073f4d.chunk.css": "/bob-salon-landing-page/static/css/2.32073f4d.chunk.css",
-    "static/js/2.7b27032a.chunk.js": "/bob-salon-landing-page/static/js/2.7b27032a.chunk.js",
-    "static/js/2.7b27032a.chunk.js.map": "/bob-salon-landing-page/static/js/2.7b27032a.chunk.js.map",
-    "static/js/3.91c101dc.chunk.js": "/bob-salon-landing-page/static/js/3.91c101dc.chunk.js",
-    "static/js/3.91c101dc.chunk.js.map": "/bob-salon-landing-page/static/js/3.91c101dc.chunk.js.map",
-    "index.html": "/bob-salon-landing-page/index.html",
-    "static/css/2.32073f4d.chunk.css.map": "/bob-salon-landing-page/static/css/2.32073f4d.chunk.css.map",
-    "static/css/main.bab0b925.chunk.css.map": "/bob-salon-landing-page/static/css/main.bab0b925.chunk.css.map",
-    "static/js/2.7b27032a.chunk.js.LICENSE.txt": "/bob-salon-landing-page/static/js/2.7b27032a.chunk.js.LICENSE.txt",
-    "static/media/aboutbob.6680829e.jpg": "/bob-salon-landing-page/static/media/aboutbob.6680829e.jpg",
-    "static/media/green.6b540e24.jpg": "/bob-salon-landing-page/static/media/green.6b540e24.jpg",
-    "static/media/hand.1fba2aad.jpg": "/bob-salon-landing-page/static/media/hand.1fba2aad.jpg",
-    "static/media/hmgImgMobilCut.baed4ce0.png": "/bob-salon-landing-page/static/media/hmgImgMobilCut.baed4ce0.png",
-    "static/media/home.f3917b3b.jpg": "/bob-salon-landing-page/static/media/home.f3917b3b.jpg",
-    "static/media/innerplace.23076523.jpg": "/bob-salon-landing-page/static/media/innerplace.23076523.jpg",
-    "static/media/lights.a764b4c6.jpg": "/bob-salon-landing-page/static/media/lights.a764b4c6.jpg"
+    "main.css": "/static/css/main.c9fea5c5.css",
+    "main.js": "/static/js/main.1b5a71a9.js",
+    "static/js/453.8677985e.chunk.js": "/static/js/453.8677985e.chunk.js",
+    "static/media/hmgImgMobilCut.png": "/static/media/hmgImgMobilCut.baed4ce04704cefe8dd5.png",
+    "static/media/aboutbob.jpg": "/static/media/aboutbob.6680829ed98dd18a50eb.jpg",
+    "static/media/innerplace.jpg": "/static/media/innerplace.230765237afc68663485.jpg",
+    "static/media/hand.jpg": "/static/media/hand.1fba2aad970b9b3487c3.jpg",
+    "static/media/home.jpg": "/static/media/home.f3917b3ba2e4556313e8.jpg",
+    "static/media/lights.jpg": "/static/media/lights.a764b4c650245d7ebc1a.jpg",
+    "static/media/green.jpg": "/static/media/green.6b540e2456fa6dd7a6fc.jpg",
+    "index.html": "/index.html",
+    "main.c9fea5c5.css.map": "/static/css/main.c9fea5c5.css.map",
+    "main.1b5a71a9.js.map": "/static/js/main.1b5a71a9.js.map",
+    "453.8677985e.chunk.js.map": "/static/js/453.8677985e.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.c0ecdc63.js",
-    "static/css/2.32073f4d.chunk.css",
-    "static/js/2.7b27032a.chunk.js",
-    "static/css/main.bab0b925.chunk.css",
-    "static/js/main.80e0fc8d.chunk.js"
+    "static/css/main.c9fea5c5.css",
+    "static/js/main.1b5a71a9.js"
   ]
 }

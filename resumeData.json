@@ -50,44 +50,39 @@
     "leistungen": [
       {
         "leistung": "Damenschnitt inkls föhnen",
-        "preis": "65€",
+        "preis": "68€-72€-75€",
         "dauer": "60 min"
       },
       {
         "leistung": "Herrenschnitt",
-        "preis": "40€",
+        "preis": "(45-50)€",
         "dauer": "60 min"
       },
       {
         "leistung": "Kind (12-16) Jahren",
-        "preis": "(30-35)€",
+        "preis": "35€",
         "dauer": "60 min"
       }
     ],
     "paintings": [
       {
-        "leistung": "Schneiden inkls. Ansatz färben",
-        "preis": "45€",
-        "dauer": "120 min"
-      },
-      {
         "leistung": "Ansatz",
-        "preis": "45€",
+        "preis": "50€",
         "dauer": "120 min"
       },
       {
         "leistung": "Ansatz inkls. Längen und Spitzen",
-        "preis": "70€",
+        "preis": "75€",
         "dauer": "120 min"
       },
       {
         "leistung": "Painting",
-        "preis": "(65-120)€",
+        "preis": "(70-125)€",
         "dauer": "120 min"
       },
       {
         "leistung": "Strähnen",
-        "preis": "(55-120)€",
+        "preis": "(60-125)€",
         "dauer": "120 min"
       }
     ],

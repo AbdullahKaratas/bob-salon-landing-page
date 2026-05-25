@@ -22,7 +22,15 @@
 /* a. General Styles
 /* ------------------------------------------------------------------ */
 
-body { background: #0f0f0f; }
+/* Winter Eleganz 2025 Color Palette:
+   - Primary (Tannengrün): #1a3a2f
+   - Background (Warmes Creme): #f8f5f0
+   - Accent (Zartes Gold): #c9a962
+   - Text (Anthrazit): #2b2b2b
+   - Secondary (Gedämpftes Rosé): #d4a5a5
+*/
+
+body { background: #1a3a2f; }
 
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
@@ -90,7 +98,7 @@ header .social li {
    padding: 0;
 }
 header .social li a { color: #fff; }
-header .social li a:hover { color: #0762f9; }
+header .social li a:hover { color: #c9a962; }
 
 /* scrolldown link */
 header .scrolldown a {
@@ -112,7 +120,7 @@ header .scrolldown a {
    -o-transition: all .3s ease-in-out;
    transition: all .3s ease-in-out;
 }
-header .scrolldown a:hover { color: #000000; }
+header .scrolldown a:hover { color: #c9a962; }
 
 /* primary navigation
 --------------------------------------------------------------------- */
@@ -135,7 +143,7 @@ header .scrolldown a:hover { color: #000000; }
    left: 0;
    top: 0;
 }
-.opaque { background-color: #333; }
+.opaque { background-color: #1a3a2f; }
 
 /* hide toggle button */
 #nav-wrap > a.mobile-btn { display: none; }
@@ -182,23 +190,23 @@ ul#nav li.current a { color: #ffffff; }
 /* ------------------------------------------------------------------ */
 
 #about {
-   background: #efdfc6;
+   background: #f8f5f0;
    padding-top: 96px;
    padding-bottom: 66px;
    overflow: hidden;
 }
 
-#about a, #about a:visited  { color: #fff; }
-#about a:hover, #about a:focus { color: #0762f9; }
+#about a, #about a:visited  { color: #1a3a2f; }
+#about a:hover, #about a:focus { color: #c9a962; }
 
 #about h2 {
    font: 22px/30px 'opensans-bold', sans-serif;
-   color: #000;
+   color: #1a3a2f;
    margin-bottom: 12px;
 }
 #about p {
    line-height: 30px;
-   color: #444;
+   color: #2b2b2b;
 }
 #about .profile-pic {
    position: relative;
@@ -214,11 +222,11 @@ ul#nav li.current a { color: #ffffff; }
 #about .main-col { padding-right: 5%; }
 #about .download .button {
    margin-top: 6px;
-   background: #444;
+   background: #1a3a2f;
 }
 #about .download .button:hover {
-   background: #fff;
-   color: #2B2B2B;
+   background: #c9a962;
+   color: #1a3a2f;
 }
 #about .download .button i {
    margin-right: 15px;
@@ -231,26 +239,28 @@ ul#nav li.current a { color: #ffffff; }
 /* ------------------------------------------------------------------ */
 
 #resume {
-   background: #f3f5cc;
+   background: #f5f2eb;
    padding-top: 90px;
    padding-bottom: 72px;
    overflow: hidden;
 }
 
-#resume a, #resume a:visited  { color: #0762f9; }
-#resume a:hover, #resume a:focus { color: #313131; }
+#resume a, #resume a:visited  { color: #1a3a2f; }
+#resume a:hover, #resume a:focus { color: #c9a962; }
 
 #resume h1 {
    font: 18px/24px 'opensans-bold', sans-serif;
    text-transform: lowercase;
    letter-spacing: 1px;
+   color: #1a3a2f;
 }
 #resume h1 span {
-   border-bottom: 3px solid #414142;
+   border-bottom: 3px solid #c9a962;
    padding-bottom: 6px;
 }
 #resume h3 {
    font: 25px/30px 'opensans-bold', sans-serif;
+   color: #2b2b2b;
 }
 
 #resume .header-col { padding-top: 9px; }
@@ -412,6 +422,9 @@ ul#nav li.current a { color: #ffffff; }
 /* ------------------------------------------------------------------ */
 
 #portfolio {
+   background: #f8f5f0;
+   padding-top: 48px;
+   padding-bottom: 48px;
 }
 #portfolio h1 {
    font: 15px/24px 'opensans-semibold', sans-serif;
@@ -419,7 +432,7 @@ ul#nav li.current a { color: #ffffff; }
    letter-spacing: 1px;
    text-align: center;
    padding-bottom: 0px;
-   color: #95A3A3;
+   color: #1a3a2f;
 }
 
 /* Portfolio Content */
@@ -786,21 +799,21 @@ call-to-action .button {
 /* ------------------------------------------------------------------ */
 
 #contact {
-   background: #f7e6c4;
+   background: #f5f2eb;
    padding-top: 96px;
    padding-bottom: 102px;
-   color: #000000;
+   color: #2b2b2b;
 }
 #contact .section-head { margin-bottom: 42px; }
 
-#contact a, #contact a:visited  { color: #0762f9; }
-#contact a:hover, #contact a:focus { color: #fff; }
+#contact a, #contact a:visited  { color: #1a3a2f; }
+#contact a:hover, #contact a:focus { color: #c9a962; }
 
 #contact h1 {
    font: 18px/24px 'opensans-bold', sans-serif;
    text-transform: lowercase;
    letter-spacing: 3px;
-   color: #000000;
+   color: #1a3a2f;
    margin-bottom: 6px;
 }
 #contact h1 span { display: none; }
@@ -812,12 +825,12 @@ call-to-action .button {
    line-height: 72px;
    text-align: left;
    float: left;
-   color: #000000;
+   color: #1a3a2f;
 }
 
 #contact h4 {
    font: 16px/24px 'opensans-bold', sans-serif;
-   color: #000000;
+   color: #1a3a2f;
    margin-bottom: 6px;
 }
 #contact p.lead {
@@ -832,7 +845,7 @@ call-to-action .button {
 #contact label {
    font: 15px/24px 'opensans-bold', sans-serif;
    margin: 12px 0;
-   color: #000000;
+   color: #1a3a2f;
 	display: inline-block;
 	float: left;
    width: 26%;
@@ -841,38 +854,43 @@ call-to-action .button {
 #contact textarea,
 #contact select {
    padding: 10px 20px;
-	color: #000;
-	background: #fbedd3;
+	color: #2b2b2b;
+	background: #faf8f5;
 	margin-bottom: 42px;
 	outline: none;
    font-size: 15px;
    line-height: 24px;
    width: 65%;
    border-radius: 12px;
-   border-color: #000000;
+   border-color: #1a3a2f;
    border-style: solid;
+   border-width: 1px;
 }
 #contact input:focus,
 #contact textarea:focus,
 #contact select:focus {
-	color: #000;
-	background-color: #f7fef9;
+	color: #2b2b2b;
+	background-color: #fff;
+   border-color: #c9a962;
 }
 #contact button.submit {
 	text-transform: lowercase;
 	letter-spacing: 3px;
-	color:rgb(2, 2, 2);
-   background: #f7e6c4;
-   border-color: #000000;
+	color: #fff;
+   background: #1a3a2f;
+   border-color: #1a3a2f;
    border-style: solid;
    cursor: pointer;
    height: auto;
    display: inline-block;
 	border-radius: 12px;
+   padding: 12px 30px;
+   transition: all 0.3s ease;
 }
 #contact button.submit:hover {
-	color: #0D0D0D;
-	background: #fff;
+	color: #1a3a2f;
+	background: #c9a962;
+   border-color: #c9a962;
 }
 #contact span.required {
 	color: #0D0D0D;
@@ -987,28 +1005,28 @@ call-to-action .button {
 footer {
    padding-top: 48px;
    padding-bottom: 48px;
-   color: #303030;
+   color: #f8f5f0;
    font-size: 14px;
    text-align: center;
    position: relative;
-   background-color: #dddab0;
+   background-color: #1a3a2f;
 }
 
-footer a, footer a:visited { color: #525252; }
+footer a, footer a:visited { color: #c9a962; }
 footer a:hover, footer a:focus { color: #fff; }
 
 /* copyright */
 footer .copyright {
     margin: 0;
     padding: 0;
-    background-color: #dddab0;
+    background-color: #1a3a2f;
  }
 footer .copyright li {
     display: inline-block;
     margin: 0;
     padding: 0;
     line-height: 24px;
-    background-color: #dddab0;
+    background-color: #1a3a2f;
 }
 .ie footer .copyright li {
    display: inline;
@@ -1017,7 +1035,7 @@ footer .copyright li:before {
     content: "\2022";
     padding-left: 10px;
     padding-right: 10px;
-    color: #095153;
+    color: #c9a962;
 }
 footer .copyright  li:first-child:before {
     display: none;
@@ -1034,7 +1052,7 @@ footer .social-links li {
     margin: 0;
     padding: 0;
     margin-left: 42px;
-    color: #F06000;
+    color: #c9a962;
 }
 
 footer .social-links li:first-child { margin-left: 0; }
@@ -1052,7 +1070,7 @@ footer .social-links li:first-child { margin-left: 0; }
 	display: block;
 	width: 60px;
 	height: 60px;
-	background-color: #525252;
+	background-color: #c9a962;
 
 	-webkit-transition: all 0.2s ease-in-out;
    -moz-transition: all 0.2s ease-in-out;
@@ -1060,12 +1078,12 @@ footer .social-links li:first-child { margin-left: 0; }
    -ms-transition: all 0.2s ease-in-out;
    transition: all 0.2s ease-in-out;
 
-   color: #fff;
+   color: #1a3a2f;
    font-size: 21px;
    line-height: 60px;
  	border-radius: 100%;
 }
-#go-top a:hover { background-color: #0F9095; }
+#go-top a:hover { background-color: #d4b56a; }
 
 
 .social .btn:first-child{
