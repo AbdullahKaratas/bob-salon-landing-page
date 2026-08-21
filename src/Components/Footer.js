@@ -15,6 +15,9 @@ class Footer extends Component {
                 <li>
                   <a href="./impressum.html">impressum</a>
                 </li>
+                <li>
+                  <a href="./datenschutz.html">datenschutz</a>
+                </li>
               </ul>
             </div>
           </Fade>

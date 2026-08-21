@@ -1,0 +1,99 @@
+/* Gemeinsame Styles fuer die Rechtstexte (Impressum, Datenschutz).
+   Baut auf den Farbvariablen aus default.css auf - default.css muss
+   deshalb vorher eingebunden sein. */
+
+body {
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: 16px/1.7 'opensans-regular', sans-serif;
+}
+
+.legal-bar {
+  background: var(--color-primary);
+  padding: 18px 24px;
+  text-align: center;
+}
+.legal-bar a {
+  font: 12px/1 'opensans-bold', sans-serif;
+  letter-spacing: .2em;
+  text-transform: lowercase;
+  color: #fff;
+}
+.legal-bar a:hover,
+.legal-bar a:focus { color: var(--color-accent); }
+
+.legal {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 64px 24px 88px;
+}
+
+.legal h1 {
+  font: 26px/1.2 'opensans-bold', sans-serif;
+  color: var(--color-primary);
+  letter-spacing: -.01em;
+  margin: 0 0 8px;
+}
+.legal .sub {
+  font: 13px/1.5 'opensans-regular', sans-serif;
+  color: var(--color-accent-deep);
+  letter-spacing: .12em;
+  text-transform: lowercase;
+  margin: 0 0 44px;
+}
+
+.legal h2 {
+  font: 13px/1.4 'opensans-bold', sans-serif;
+  letter-spacing: .14em;
+  text-transform: lowercase;
+  color: var(--color-accent-deep);
+  margin: 38px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #dcd8d2;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-text) 14%, transparent);
+}
+
+.legal p { margin: 0 0 14px; }
+.legal p:last-child { margin-bottom: 0; }
+
+.legal address {
+  font-style: normal;
+  font: 16px/1.8 'librebaskerville-regular', serif;
+  color: var(--color-text);
+}
+
+.legal a { color: var(--color-primary); text-decoration: underline; }
+.legal a:hover, .legal a:focus { color: var(--color-accent-deep); }
+
+.legal .muted {
+  font-size: 14px;
+  color: #6d6a75;
+  color: color-mix(in srgb, var(--color-text) 62%, transparent);
+}
+
+/* Entwurfs-Markierung: fliegt raus, sobald Francisco bestaetigt hat */
+.todo {
+  display: inline-block;
+  background: var(--color-accent);
+  color: var(--color-primary);
+  font: 13px/1.5 'opensans-bold', sans-serif;
+  padding: 1px 8px;
+  border-radius: 2px;
+}
+
+.draft-note {
+  background: var(--color-surface-alt);
+  border-left: 3px solid var(--color-accent-deep);
+  padding: 16px 20px;
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+
+footer.legal-foot {
+  background: var(--color-primary);
+  color: #fff;
+  text-align: center;
+  padding: 26px 24px;
+  font-size: 13px;
+}
+footer.legal-foot a { color: var(--color-accent); }

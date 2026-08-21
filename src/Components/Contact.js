@@ -206,6 +206,11 @@ class Contact extends Component {
                         <button className="submit" type="submit">
                           Senden
                         </button>
+                        <p className="form-privacy">
+                          Mit dem Absenden verarbeiten wir Ihre Angaben, um Ihre
+                          Anfrage zu beantworten. Näheres in der{" "}
+                          <a href="./datenschutz.html">Datenschutzerklärung</a>.
+                        </p>
                       </div>
                     )}
                   </form>
