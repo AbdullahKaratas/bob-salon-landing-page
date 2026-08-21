@@ -35,7 +35,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "test:reservierung": "node --test \"supabase/functions/_shared/*.test.mjs\""
   },
   "eslintConfig": {
     "extends": [
