@@ -12,6 +12,9 @@ class Footer extends Component {
             <div className="twelve columns">
               <ul className="copyright">
                 <li>&copy; {new Date().getFullYear()} bob-salon</li>
+                <li>
+                  <a href="./impressum.html">impressum</a>
+                </li>
               </ul>
             </div>
           </Fade>
