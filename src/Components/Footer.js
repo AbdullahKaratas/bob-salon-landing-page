@@ -11,7 +11,7 @@ class Footer extends Component {
           <Fade duration={600}>
             <div className="twelve columns">
               <ul className="copyright">
-                <li>&copy; copyright 2022 bob-salon</li>
+                <li>&copy; {new Date().getFullYear()} bob-salon</li>
               </ul>
             </div>
           </Fade>
