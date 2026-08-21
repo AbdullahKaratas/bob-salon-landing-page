@@ -2,96 +2,62 @@ import React, { Component } from "react";
 import Fade from "react-reveal";
 
 class Resume extends Component {
-  getRandomColor() {
-    let letters = "0123456789ABCDEF";
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  }
-
   render() {
     if (!this.props.data) return null;
 
-    const leistungen = this.props.data.leistungen.map(function (leistung) {
-      return (
-        <div key={leistung.leistung.toLowerCase()}>
-          <p className="info">
-          {leistung.leistung.toLowerCase()}<span>&bull;</span>
-            <em className="date">{leistung.preis.toLowerCase()}</em>
-          </p>
-        </div>
-      );
-    });
-
-    const paintings = this.props.data.paintings.map(function (painting) {
-      return (
-        <div key={painting.leistung.toLowerCase()}>
-          <p className="info">
-          {painting.leistung.toLowerCase()}<span>&bull;</span>
-            <em className="date">{painting.preis.toLowerCase()}</em>
-          </p>
-        </div>
-      );
-    });
-
-    const elsecases = this.props.data.elsecases.map((elsecase) => {
-      return (
-        <div key={elsecase.leistung.toLowerCase()}>
-          <p className="info">
-          {elsecase.leistung.toLowerCase()}<span>&bull;</span>
-            <em className="date">{elsecase.preis.toLowerCase()}</em>
-          </p>
-        </div>
-      );
-    });
+    const sections = this.props.data.sections || [];
+    const footnote = this.props.data.footnote;
 
     return (
       <section id="resume">
-        <Fade duration={600}>
-          <div className="row education">
-            <div className="three columns header-col">
-              <h1>
-                <span>haarschnitt</span>
-              </h1>
-            </div>
-
-            <div className="nine columns main-col">
-              <div className="row item">
-                <div className="twelve columns">{leistungen}</div>
-              </div>
-            </div>
-          </div>
-        </Fade>
-
-        <Fade duration={600} delay={100}>
-          <div className="row work">
-            <div className="three columns header-col">
-              <h1>
-                <span>färben</span>
-              </h1>
-            </div>
-
-            <div className="nine columns main-col">{paintings}</div>
-          </div>
-        </Fade>
-
-        <Fade duration={600} delay={200}>
-          <div className="row skill">
-            <div className="three columns header-col">
-              <h1>
-                <span>weitere leistungen</span>
-              </h1>
-            </div>
-
-            <div className="nine columns main-col">
+        {sections.map((section, sectionIndex) => (
+          <Fade duration={600} delay={sectionIndex * 100} key={section.id}>
+            <div
+              className={
+                "row price-block" +
+                (sectionIndex === sections.length - 1 ? " price-block-last" : "")
+              }
+            >
               <div className="three columns header-col">
-                <ul className="skills">{elsecases}</ul>
+                <h1>
+                  <span>{section.title}</span>
+                </h1>
+              </div>
+
+              <div className="nine columns main-col">
+                {section.groups.map((group, groupIndex) => (
+                  <div className="price-group" key={group.subtitle || groupIndex}>
+                    {group.subtitle && (
+                      <h3 className="price-group-title">{group.subtitle}</h3>
+                    )}
+
+                    <ul className="price-list">
+                      {group.items.map((item) => (
+                        <li className="price-item" key={item.leistung}>
+                          <span className="price-item-name">{item.leistung}</span>
+                          <span className="price-item-dots" aria-hidden="true"></span>
+                          <span className="price-item-price">{item.preis}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+
+                {section.note && <p className="price-note">{section.note}</p>}
               </div>
             </div>
-          </div>
-        </Fade>
+          </Fade>
+        ))}
+
+        {footnote && (
+          <Fade duration={600} delay={sections.length * 100}>
+            <div className="row">
+              <div className="twelve columns">
+                <p className="price-footnote">{footnote}</p>
+              </div>
+            </div>
+          </Fade>
+        )}
       </section>
     );
   }

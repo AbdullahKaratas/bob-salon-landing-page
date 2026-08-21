@@ -30,6 +30,24 @@ e. Others
 @import url("fontello/css/fontello.css");
 @import url("font-awesome/css/font-awesome.min.css");
 
+/* ------------------------------------------------------------------ */
+/* Farbpalette (bob salon)
+      Alle Farben der Seite laufen ueber diese Variablen.
+      Fuer einen Farbwechsel reicht es, hier die Werte zu tauschen.
+ ------------------------------------------------------------------ */
+
+:root {
+   /* Graphit & Flieder */
+   --color-primary:      #1b1a1f; /* dunkler Grundton: body, Navi, Footer, Buttons */
+   --color-surface:      #f1efec; /* heller Sektionshintergrund (ueber bob-salon) */
+   --color-surface-alt:  #e9e6e1; /* zweiter heller Sektionshintergrund (Preisliste, Kontakt) */
+   --color-accent:       #c3b0dd; /* helles Flieder: nur auf dunklem Grund + als Button-Flaeche */
+   --color-accent-hover: #ad97cd; /* kraeftigeres Flieder: Hover auf Akzentflaechen */
+   --color-accent-deep:  #6b5688; /* dunkles Flieder: als Textfarbe auf hellen Flaechen */
+   --color-text:         #232228; /* Fliesstext */
+   --color-secondary:    #8d8896; /* Zweitakzent (derzeit ungenutzt) */
+}
+
 /* ------------------------------------------------------------------
 /* b. Reset
       Adapted from:
@@ -288,14 +306,14 @@ hr { border: solid #E3E3E3; border-width: 1px 0 0; clear: both; margin: 11px 0 3
 a, a:visited {
    text-decoration: none;
    outline: 0;
-   color: #1a3a2f;
+   color: var(--color-primary);
 
    -webkit-transition: color .3s ease-in-out;
    -moz-transition: color .3s ease-in-out;
    -o-transition: color .3s ease-in-out;
    transition: color .3s ease-in-out;
 }
-a:hover, a:focus { color: #c9a962; }
+a:hover, a:focus { color: var(--color-accent-deep); }
 p a, p a:visited { line-height: inherit; }
 
 
@@ -464,7 +482,7 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
    font: 16px/30px 'opensans-bold', sans-serif;
-   background: #1a3a2f;
+   background: var(--color-primary);
    display: inline-block;
 	text-decoration: none;
    letter-spacing: 0;
@@ -492,8 +510,8 @@ button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover {
-   background: #c9a962;
-   color: #1a3a2f;
+   background: var(--color-accent);
+   color: var(--color-primary);
 }
 
 .button:active,
@@ -501,8 +519,8 @@ button:active,
 input[type="submit"]:active,
 input[type="reset"]:active,
 input[type="button"]:active {
-   background: #c9a962;
-   color: #1a3a2f;
+   background: var(--color-accent);
+   color: var(--color-primary);
 }
 
 .button.full-width,

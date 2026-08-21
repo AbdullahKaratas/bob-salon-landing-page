@@ -46,68 +46,116 @@
     ]
   },
   "resume": {
-    "skillmessage": "Here you can create a short write-up of your skills to show off to employers",
-    "leistungen": [
+    "sections": [
       {
-        "leistung": "Damenschnitt inkls föhnen",
-        "preis": "68€-72€-75€",
-        "dauer": "60 min"
+        "id": "schnitt",
+        "title": "schnitt",
+        "groups": [
+          {
+            "subtitle": "damen",
+            "items": [
+              {
+                "leistung": "schnitt · kurz",
+                "preis": "75 €"
+              },
+              {
+                "leistung": "schnitt · mittel",
+                "preis": "79 €"
+              },
+              {
+                "leistung": "schnitt · lang",
+                "preis": "85 €"
+              },
+              {
+                "leistung": "neuer schnitt · bei größerer veränderung",
+                "preis": "ab 90 €"
+              }
+            ]
+          },
+          {
+            "subtitle": "herren",
+            "items": [
+              {
+                "leistung": "schnitt",
+                "preis": "50 €"
+              },
+              {
+                "leistung": "neuer schnitt · bei größerer veränderung",
+                "preis": "ab 60 €"
+              },
+              {
+                "leistung": "kids · 12–16 jahre",
+                "preis": "39 €"
+              }
+            ]
+          }
+        ]
       },
       {
-        "leistung": "Herrenschnitt",
-        "preis": "(45-50)€",
-        "dauer": "60 min"
+        "id": "farbe",
+        "title": "farbe",
+        "note": "Farbpreise richten sich nach Zeitaufwand, Haarmenge und Materialverbrauch.",
+        "groups": [
+          {
+            "items": [
+              {
+                "leistung": "ansatz",
+                "preis": "ab 55 €"
+              },
+              {
+                "leistung": "ansatz + längen & spitzen",
+                "preis": "ab 85 €"
+              },
+              {
+                "leistung": "painting",
+                "preis": "ab 80 €"
+              },
+              {
+                "leistung": "strähnen",
+                "preis": "ab 70 €"
+              }
+            ]
+          }
+        ]
       },
       {
-        "leistung": "Kind (12-16) Jahren",
-        "preis": "35€",
-        "dauer": "60 min"
+        "id": "styling",
+        "title": "styling",
+        "groups": [
+          {
+            "items": [
+              {
+                "leistung": "styling",
+                "preis": "ab 40 €"
+              },
+              {
+                "leistung": "event hair styling",
+                "preis": "ab 60 €"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "brows",
+        "title": "brows",
+        "groups": [
+          {
+            "items": [
+              {
+                "leistung": "augenbrauen zupfen",
+                "preis": "10 €"
+              },
+              {
+                "leistung": "augenbrauen färben",
+                "preis": "12 €"
+              }
+            ]
+          }
+        ]
       }
     ],
-    "paintings": [
-      {
-        "leistung": "Ansatz",
-        "preis": "50€",
-        "dauer": "120 min"
-      },
-      {
-        "leistung": "Ansatz inkls. Längen und Spitzen",
-        "preis": "75€",
-        "dauer": "120 min"
-      },
-      {
-        "leistung": "Painting",
-        "preis": "(70-125)€",
-        "dauer": "120 min"
-      },
-      {
-        "leistung": "Strähnen",
-        "preis": "(60-125)€",
-        "dauer": "120 min"
-      }
-    ],
-    "elsecases": [
-      {
-        "leistung": "Styling",
-        "preis": "35€",
-        "dauer": "30 min"
-      },
-      {
-        "leistung": "Hochstecken",
-        "preis": "50€",
-        "dauer": "30 min"
-      },
-      {
-        "leistung": "Augenbraun zupfen",
-        "preis": "8€",
-        "dauer": "30 min"
-      },
-      {
-        "leistung": "Augenbraun färben",
-        "preis": "10€",
-        "dauer": "30 min"
-      }
-    ]
+    "footnote": "Alle Preise inkl. 19 % MwSt."
   },
   "portfolio": {
     "projects": [

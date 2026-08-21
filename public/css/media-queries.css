@@ -235,7 +235,8 @@
    }
    #resume h1 { letter-spacing: 3px; }
    #resume .main-col { padding-right: 30px; }
-   #resume h3, #resume .info { text-align: center; }
+   #resume .price-group-title { text-align: center; }
+   #resume .price-note { text-align: center; }
       
    .bars { width: 100%; }
 

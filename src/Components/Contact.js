@@ -182,7 +182,10 @@ class Contact extends Component {
                         <Alert
                           variant="filled"
                           severity="success"
-                          style={{ background: "#c9a962", color: "#1a3a2f" }}
+                          style={{
+                            background: "var(--color-accent)",
+                            color: "var(--color-primary)",
+                          }}
                         >
                           <AlertTitle style={{ fontSize: "15px" }}>
                             Nachricht gesendet
