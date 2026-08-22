@@ -1,0 +1,11 @@
+project_id = "bob-salon"
+
+# Beide Endpunkte sind oeffentlich: es gibt keinen angemeldeten Nutzer, dessen
+# Token man pruefen koennte. Der Schutz liegt in der Validierung, im Honigtopf
+# und darin, dass `buchen` die Verfuegbarkeit selbst nachrechnet, statt der
+# Anfrage zu glauben.
+[functions.slots]
+verify_jwt = false
+
+[functions.buchen]
+verify_jwt = false

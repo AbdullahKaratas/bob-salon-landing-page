@@ -21,8 +21,14 @@ verbunden.
 |---|---|
 | `supabase/migrations/20260821120000_reservierung.sql` | Schema: Leistungen, Öffnungszeiten, Ausnahmen, Termine, RLS |
 | `supabase/seed.sql` | Leistungen mit geschätzten Dauern, Platzhalter-Öffnungszeiten |
+| `supabase/migrations/20260822090000_zeitfenster.sql` | SQL-Funktionen `oeffnungsfenster` und `belegte_zeiten` |
 | `supabase/functions/_shared/verfuegbarkeit.mjs` | Slot-Berechnung, reine Arithmetik |
-| `supabase/functions/_shared/verfuegbarkeit.test.mjs` | 13 Tests, laufen ohne Infrastruktur |
+| `supabase/functions/_shared/planung.mjs` | Verfügbarkeit ermitteln, von beiden Endpunkten genutzt |
+| `supabase/functions/_shared/regeln.mjs` | Raster, Puffer, Vorlauf, Buchungshorizont |
+| `supabase/functions/_shared/http.mjs` | CORS, JSON, Eingabeprüfungen |
+| `supabase/functions/slots/index.ts` | POST → freie Zeiten |
+| `supabase/functions/buchen/index.ts` | POST → Termin anlegen |
+| `…/*.test.mjs` | 26 Tests, laufen ohne Infrastruktur |
 
 Tests: `npm run test:reservierung`
 
@@ -52,8 +58,8 @@ Deshalb ist sie ohne Datenbank testbar, und die Sommerzeit geht nicht kaputt.
 
 ## Nächste Schritte
 
-- [ ] Edge Function `slots` — freie Zeiten für Leistung und Datum
-- [ ] Edge Function `buchen` — Termin anlegen, Constraint-Verletzung sauber
+- [x] Edge Function `slots` — freie Zeiten für Leistung und Datum
+- [x] Edge Function `buchen` — Termin anlegen, Constraint-Verletzung sauber
       abfangen und als „Slot inzwischen vergeben" zurückgeben
 - [ ] Bestätigungsmail mit Storno-Link
 - [ ] CalDAV-Abgleich mit dem GMX-Kalender, beide Richtungen
@@ -62,6 +68,36 @@ Deshalb ist sie ohne Datenbank testbar, und die Sommerzeit geht nicht kaputt.
 - [ ] Abschnitt in der Datenschutzerklärung: jetzt werden Daten gespeichert,
       nicht mehr nur durchgereicht. Löschkonzept und Fristen nötig.
 - [ ] AVV mit Supabase
+
+## Die Endpunkte
+
+```
+POST /functions/v1/slots
+  { "datum": "2026-09-03", "leistung_ids": ["damen-schnitt-kurz"] }
+  → { "ok": true, "dauer_minuten": 60, "slots": ["2026-09-03T07:00:00.000Z", …] }
+
+POST /functions/v1/buchen
+  { "datum", "leistung_ids", "start", "name", "email", "telefon?", "anmerkung?" }
+  → 201 { "ok": true, "termin_id", "storno_token", "start", "ende" }
+  → 409 { "ok": false, "fehler": "slot_inzwischen_vergeben" }
+```
+
+Zeiten gehen als UTC über die Leitung. Die Anzeige in Ortszeit macht das
+Frontend.
+
+### Warum `buchen` die Verfügbarkeit noch einmal rechnet
+
+Zwei Absicherungen greifen ineinander. Erstens wird der gewünschte Start gegen
+die frisch berechnete Slot-Liste geprüft — was nie angeboten wurde, wird nicht
+gebucht, sonst könnte jemand per `curl` einen Termin um drei Uhr nachts
+eintragen. Zweitens bleibt selbst danach ein Spalt zwischen Rechnen und
+Schreiben, und genau den schließt der Exclusion-Constraint: Postgres lässt den
+zweiten Insert mit `23P01` scheitern, und der Endpunkt meldet ehrlich „inzwischen
+vergeben".
+
+Beide Endpunkte nutzen dieselbe Funktion `ermittleSlots`. Zwei getrennte
+Implementierungen würden früher oder später auseinanderlaufen, und dann wäre
+buchbar, was nicht angezeigt wurde.
 
 ## Was ich zum Deployen brauche
 
