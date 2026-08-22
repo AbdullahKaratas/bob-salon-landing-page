@@ -195,7 +195,7 @@ ul#nav li.current a { color: #ffffff; }
 }
 
 #about a, #about a:visited  { color: var(--color-primary); }
-#about a:hover, #about a:focus { color: var(--color-accent-deep); }
+#about a:hover, #about a:focus { color: var(--color-primary); text-decoration: underline; }
 
 #about h2 {
    font: 22px/30px 'opensans-bold', sans-serif;
@@ -244,7 +244,7 @@ ul#nav li.current a { color: #ffffff; }
 }
 
 #resume a, #resume a:visited  { color: var(--color-primary); }
-#resume a:hover, #resume a:focus { color: var(--color-accent-deep); }
+#resume a:hover, #resume a:focus { color: var(--color-primary); text-decoration: underline; }
 
 #resume h1 {
    font: 18px/24px 'opensans-bold', sans-serif;
@@ -253,8 +253,10 @@ ul#nav li.current a { color: #ffffff; }
    color: var(--color-primary);
 }
 #resume h1 span {
-   border-bottom: 3px solid var(--color-accent-deep);
-   padding-bottom: 6px;
+   /* Dicker als die ueblichen 3px: eine duenne Neonlinie verschwindet auf
+      dem hellen Grund, eine breite liest sich als Markierung. */
+   border-bottom: 6px solid var(--color-accent);
+   padding-bottom: 4px;
 }
 #resume h3 {
    font: 25px/30px 'opensans-bold', sans-serif;
@@ -281,10 +283,16 @@ ul#nav li.current a { color: #ffffff; }
 #resume .price-group:last-child { margin-bottom: 0; }
 
 #resume .price-group-title {
+   display: inline-block;
    font: 13px/20px 'opensans-bold', sans-serif;
    text-transform: lowercase;
    letter-spacing: 2px;
-   color: var(--color-accent-deep);
+   /* Neon traegt auf hellem Grund nur als Flaeche, nicht als Schriftfarbe -
+      dafuer ist es zu hell. Als Markierung mit dunkler Schrift darauf sitzt
+      es richtig, und der Text steht bei 15:1. */
+   background: var(--color-accent);
+   color: var(--color-primary);
+   padding: 4px 10px 3px;
    margin-bottom: 15px;
 }
 
@@ -855,7 +863,7 @@ call-to-action .button {
 #contact .section-head { margin-bottom: 42px; }
 
 #contact a, #contact a:visited  { color: var(--color-primary); }
-#contact a:hover, #contact a:focus { color: var(--color-accent-deep); }
+#contact a:hover, #contact a:focus { color: var(--color-primary); text-decoration: underline; }
 
 #contact h1 {
    font: 18px/24px 'opensans-bold', sans-serif;
@@ -919,7 +927,8 @@ call-to-action .button {
 #contact select:focus {
 	color: var(--color-text);
 	background-color: #fff;
-   border-color: var(--color-accent-deep);
+   border-color: var(--color-primary);
+   border-width: 2px;
 }
 #contact button.submit {
 	text-transform: lowercase;

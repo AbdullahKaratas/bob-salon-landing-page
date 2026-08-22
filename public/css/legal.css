@@ -36,7 +36,7 @@ body {
 }
 .legal .sub {
   font: 13px/1.5 'opensans-regular', sans-serif;
-  color: var(--color-accent-deep);
+  color: var(--color-primary);
   letter-spacing: .12em;
   text-transform: lowercase;
   margin: 0 0 44px;
@@ -46,7 +46,7 @@ body {
   font: 13px/1.4 'opensans-bold', sans-serif;
   letter-spacing: .14em;
   text-transform: lowercase;
-  color: var(--color-accent-deep);
+  color: var(--color-primary);
   margin: 38px 0 12px;
   padding-bottom: 6px;
   border-bottom: 1px solid #dcd8d2;
@@ -63,7 +63,7 @@ body {
 }
 
 .legal a { color: var(--color-primary); text-decoration: underline; }
-.legal a:hover, .legal a:focus { color: var(--color-accent-deep); }
+.legal a:hover, .legal a:focus { color: var(--color-primary); }
 
 .legal .muted {
   font-size: 14px;
@@ -83,7 +83,7 @@ body {
 
 .draft-note {
   background: var(--color-surface-alt);
-  border-left: 3px solid var(--color-accent-deep);
+  border-left: 3px solid var(--color-accent);
   padding: 16px 20px;
   margin-bottom: 40px;
   font-size: 14px;

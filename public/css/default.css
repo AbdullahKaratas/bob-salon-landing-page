@@ -41,9 +41,9 @@ e. Others
    --color-primary:      #1a1b17; /* dunkler Grundton: body, Navi, Footer, Buttons */
    --color-surface:      #f0f1ec; /* heller Sektionshintergrund (ueber bob-salon) */
    --color-surface-alt:  #e7e9e1; /* zweiter heller Sektionshintergrund (Preisliste, Kontakt) */
-   --color-accent:       #e4ff3f; /* Neonzitrus: nur auf dunklem Grund + als Button-Flaeche */
+   --color-accent:       #e4ff3f; /* Neonzitrus. Auf hellem Grund nur als Flaeche mit
+                                     dunkler Schrift darauf - als Schriftfarbe zu hell. */
    --color-accent-hover: #cdea25; /* kraeftigeres Zitrus: Hover auf Akzentflaechen */
-   --color-accent-deep:  #5c6b12; /* dunkles Oliv-Zitrus: als Textfarbe auf hellen Flaechen */
    --color-text:         #22241f; /* Fliesstext */
    --color-secondary:    #8a8f80; /* Zweitakzent (derzeit ungenutzt) */
 }
