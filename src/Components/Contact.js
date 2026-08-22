@@ -117,7 +117,9 @@ class Contact extends Component {
               </h1>
             </div>
             <div className="ten columns">
-              <p className="lead">{message}</p>
+              <p className="lead">
+                <span>{message}</span>
+              </p>
             </div>
           </div>
         </Fade>

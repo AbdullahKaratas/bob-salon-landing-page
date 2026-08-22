@@ -169,7 +169,7 @@ ul#nav li a {
    line-height: 32px;
 	text-decoration: none;
    text-align: left;
-   color: #fff;
+   color: var(--color-accent);
 
 	-webkit-transition: color .2s ease-in-out;
 	-moz-transition: color .2s ease-in-out;
@@ -178,9 +178,9 @@ ul#nav li a {
 	transition: color .2s ease-in-out;
 }
 
-ul#nav li a:hover, ul#nav li a:focus { color: var(--color-accent); }
+ul#nav li a:hover, ul#nav li a:focus { color: #fff; }
 ul#nav li a:active { background-color: transparent !important; }
-ul#nav li.current a { color: #ffffff; }
+ul#nav li.current a { color: #fff; }
 
 
 /* ------------------------------------------------------------------ */
@@ -194,12 +194,15 @@ ul#nav li.current a { color: #ffffff; }
    overflow: hidden;
 }
 
-#about a, #about a:visited  { color: var(--color-primary); }
-#about a:hover, #about a:focus { color: var(--color-primary); text-decoration: underline; }
+#about a, #about a:visited  { color: var(--color-accent); }
+#about a:hover, #about a:focus { color: var(--color-accent-hover); text-decoration: underline; }
 
 #about h2 {
+   display: inline-block;
    font: 22px/30px 'opensans-bold', sans-serif;
-   color: var(--color-primary);
+   color: var(--color-accent);
+   border-bottom: 6px solid var(--color-accent);
+   padding-bottom: 2px;
    margin-bottom: 12px;
 }
 #about p {
@@ -243,20 +246,18 @@ ul#nav li.current a { color: #ffffff; }
    overflow: hidden;
 }
 
-#resume a, #resume a:visited  { color: var(--color-primary); }
-#resume a:hover, #resume a:focus { color: var(--color-primary); text-decoration: underline; }
+#resume a, #resume a:visited  { color: var(--color-accent); }
+#resume a:hover, #resume a:focus { color: var(--color-accent-hover); text-decoration: underline; }
 
 #resume h1 {
    font: 18px/24px 'opensans-bold', sans-serif;
    text-transform: lowercase;
    letter-spacing: 1px;
-   color: var(--color-primary);
+   color: var(--color-text);
 }
 #resume h1 span {
-   /* Dicker als die ueblichen 3px: eine duenne Neonlinie verschwindet auf
-      dem hellen Grund, eine breite liest sich als Markierung. */
-   border-bottom: 6px solid var(--color-accent);
-   padding-bottom: 4px;
+   border-bottom: 3px solid var(--color-accent);
+   padding-bottom: 6px;
 }
 #resume h3 {
    font: 25px/30px 'opensans-bold', sans-serif;
@@ -270,8 +271,8 @@ ul#nav li.current a { color: #ffffff; }
 #resume .price-block {
    margin-bottom: 48px;
    padding-bottom: 30px;
-   border-bottom: 1px solid #dcd8d2; /* Fallback fuer alte Browser */
-   border-bottom: 1px solid color-mix(in srgb, var(--color-text) 14%, transparent);
+   border-bottom: 1px solid #3a3c33; /* Fallback fuer alte Browser */
+   border-bottom: 1px solid color-mix(in srgb, var(--color-text) 20%, transparent);
 }
 #resume .price-block-last {
    margin-bottom: 24px;
@@ -283,16 +284,10 @@ ul#nav li.current a { color: #ffffff; }
 #resume .price-group:last-child { margin-bottom: 0; }
 
 #resume .price-group-title {
-   display: inline-block;
    font: 13px/20px 'opensans-bold', sans-serif;
    text-transform: lowercase;
    letter-spacing: 2px;
-   /* Neon traegt auf hellem Grund nur als Flaeche, nicht als Schriftfarbe -
-      dafuer ist es zu hell. Als Markierung mit dunkler Schrift darauf sitzt
-      es richtig, und der Text steht bei 15:1. */
-   background: var(--color-accent);
-   color: var(--color-primary);
-   padding: 4px 10px 3px;
+   color: var(--color-accent);
    margin-bottom: 15px;
 }
 
@@ -318,26 +313,26 @@ ul#nav li.current a { color: #ffffff; }
    flex: 1 1 auto;
    min-width: 18px;
    margin: 0 10px;
-   border-bottom: 1px dotted #b3aeb8; /* Fallback fuer alte Browser */
-   border-bottom: 1px dotted color-mix(in srgb, var(--color-text) 32%, transparent);
+   border-bottom: 1px dotted #55584c; /* Fallback fuer alte Browser */
+   border-bottom: 1px dotted color-mix(in srgb, var(--color-text) 30%, transparent);
    transform: translateY(-5px);
 }
 #resume .price-item-price {
    font: 15px/24px 'opensans-bold', sans-serif;
-   color: var(--color-primary);
+   color: var(--color-accent);
    white-space: nowrap;
 }
 
 #resume .price-note {
    font: 13px/22px 'opensans-regular', sans-serif;
-   color: #6d6a75; /* Fallback fuer alte Browser */
-   color: color-mix(in srgb, var(--color-text) 62%, transparent);
+   color: #a3a698; /* Fallback fuer alte Browser */
+   color: color-mix(in srgb, var(--color-text) 68%, transparent);
    margin: 22px 0 0 0;
 }
 #resume .price-footnote {
    font: 13px/22px 'opensans-regular', sans-serif;
-   color: #6d6a75; /* Fallback fuer alte Browser */
-   color: color-mix(in srgb, var(--color-text) 62%, transparent);
+   color: #a3a698; /* Fallback fuer alte Browser */
+   color: color-mix(in srgb, var(--color-text) 68%, transparent);
    text-align: center;
    margin: 0;
 }
@@ -862,14 +857,14 @@ call-to-action .button {
 }
 #contact .section-head { margin-bottom: 42px; }
 
-#contact a, #contact a:visited  { color: var(--color-primary); }
-#contact a:hover, #contact a:focus { color: var(--color-primary); text-decoration: underline; }
+#contact a, #contact a:visited  { color: var(--color-accent); }
+#contact a:hover, #contact a:focus { color: var(--color-accent-hover); text-decoration: underline; }
 
 #contact h1 {
    font: 18px/24px 'opensans-bold', sans-serif;
    text-transform: lowercase;
    letter-spacing: 3px;
-   color: var(--color-primary);
+   color: var(--color-text);
    margin-bottom: 6px;
 }
 #contact h1 span { display: none; }
@@ -881,18 +876,19 @@ call-to-action .button {
    line-height: 72px;
    text-align: left;
    float: left;
-   color: var(--color-primary);
+   color: var(--color-accent);
 }
 
 #contact h4 {
    font: 16px/24px 'opensans-bold', sans-serif;
-   color: var(--color-primary);
+   color: var(--color-accent);
    margin-bottom: 6px;
 }
 #contact p.lead {
    font: 18px/36px 'opensans-light', sans-serif;
    padding-right: 3%;
 }
+#contact p.lead span { color: var(--color-text); }
 #contact .header-col { padding-top: 6px; }
 
 
@@ -901,24 +897,24 @@ call-to-action .button {
 #contact label {
    font: 15px/24px 'opensans-bold', sans-serif;
    margin: 12px 0;
-   color: var(--color-primary);
-	display: inline-block;
-	float: left;
-   width: 26%;
+   color: var(--color-accent);
+   display: inline-block;
+   float: none;
+   width: auto;
 }
 #contact input,
 #contact textarea,
 #contact select {
    padding: 10px 20px;
 	color: var(--color-text);
-	background: #faf8f5;
+	background: rgba(255, 255, 255, .04);
 	margin-bottom: 42px;
 	outline: none;
    font-size: 15px;
    line-height: 24px;
    width: 65%;
    border-radius: 12px;
-   border-color: var(--color-primary);
+   border-color: rgba(230, 232, 221, .35);
    border-style: solid;
    border-width: 1px;
 }
@@ -926,16 +922,16 @@ call-to-action .button {
 #contact textarea:focus,
 #contact select:focus {
 	color: var(--color-text);
-	background-color: #fff;
-   border-color: var(--color-primary);
+	background-color: rgba(255, 255, 255, .07);
+   border-color: var(--color-accent);
    border-width: 2px;
 }
 #contact button.submit {
 	text-transform: lowercase;
 	letter-spacing: 3px;
-	color: #fff;
-   background: var(--color-primary);
-   border-color: var(--color-primary);
+	color: var(--color-primary);
+   background: var(--color-accent);
+   border-color: var(--color-accent);
    border-style: solid;
    cursor: pointer;
    height: auto;
@@ -946,15 +942,15 @@ call-to-action .button {
 }
 #contact button.submit:hover {
 	color: var(--color-primary);
-	background: var(--color-accent);
-   border-color: var(--color-accent);
+	background: var(--color-accent-hover);
+   border-color: var(--color-accent-hover);
 }
 #contact .form-privacy {
    margin: 18px 0 0 0;
    max-width: 34em;
    font: 13px/1.6 'opensans-regular', sans-serif;
-   color: #6d6a75; /* Fallback fuer alte Browser */
-   color: color-mix(in srgb, var(--color-text) 62%, transparent);
+   color: #a3a698; /* Fallback fuer alte Browser */
+   color: color-mix(in srgb, var(--color-text) 68%, transparent);
 }
 #contact .form-privacy a { text-decoration: underline; }
 

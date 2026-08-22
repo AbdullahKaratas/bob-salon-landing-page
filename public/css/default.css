@@ -37,15 +37,17 @@ e. Others
  ------------------------------------------------------------------ */
 
 :root {
-   /* Graphit & Neonzitrus */
-   --color-primary:      #1a1b17; /* dunkler Grundton: body, Navi, Footer, Buttons */
-   --color-surface:      #f0f1ec; /* heller Sektionshintergrund (ueber bob-salon) */
-   --color-surface-alt:  #e7e9e1; /* zweiter heller Sektionshintergrund (Preisliste, Kontakt) */
-   --color-accent:       #e4ff3f; /* Neonzitrus. Auf hellem Grund nur als Flaeche mit
-                                     dunkler Schrift darauf - als Schriftfarbe zu hell. */
-   --color-accent-hover: #cdea25; /* kraeftigeres Zitrus: Hover auf Akzentflaechen */
-   --color-text:         #22241f; /* Fliesstext */
-   --color-secondary:    #8a8f80; /* Zweitakzent (derzeit ungenutzt) */
+   /* Graphit & Neonzitrus, durchgehend dunkel.
+      Der helle Grund war der Grund, warum Neon nicht getragen hat: bei
+      gleicher Helligkeit wie das Papier bleibt nur ein stumpfes Oliv. Auf
+      dunklem Grund ist Neon einfach Schriftfarbe - 15:1, ohne Umwege. */
+   --color-primary:      #131410; /* tiefster Ton: body, Navi, Footer */
+   --color-surface:      #1b1c17; /* Sektionsflaeche (ueber bob-salon, galerie) */
+   --color-surface-alt:  #212319; /* zweite Sektionsflaeche (Preisliste, Kontakt) */
+   --color-accent:       #e4ff3f; /* Neonzitrus, jetzt ueberall als Schriftfarbe nutzbar */
+   --color-accent-hover: #cdea25; /* kraeftigeres Zitrus fuer Hover */
+   --color-text:         #e6e8dd; /* Fliesstext, leicht ins Gruene gebrochen */
+   --color-secondary:    #8a8f80; /* gedaempft, fuer Nebensaechliches */
 }
 
 /* ------------------------------------------------------------------

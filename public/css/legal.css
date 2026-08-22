@@ -30,13 +30,13 @@ body {
 
 .legal h1 {
   font: 26px/1.2 'opensans-bold', sans-serif;
-  color: var(--color-primary);
+  color: var(--color-text);
   letter-spacing: -.01em;
   margin: 0 0 8px;
 }
 .legal .sub {
   font: 13px/1.5 'opensans-regular', sans-serif;
-  color: var(--color-primary);
+  color: var(--color-accent);
   letter-spacing: .12em;
   text-transform: lowercase;
   margin: 0 0 44px;
@@ -46,11 +46,11 @@ body {
   font: 13px/1.4 'opensans-bold', sans-serif;
   letter-spacing: .14em;
   text-transform: lowercase;
-  color: var(--color-primary);
+  color: var(--color-accent);
   margin: 38px 0 12px;
   padding-bottom: 6px;
-  border-bottom: 1px solid #dcd8d2;
-  border-bottom: 1px solid color-mix(in srgb, var(--color-text) 14%, transparent);
+  border-bottom: 1px solid #3a3c33;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-text) 22%, transparent);
 }
 
 .legal p { margin: 0 0 14px; }
@@ -62,13 +62,13 @@ body {
   color: var(--color-text);
 }
 
-.legal a { color: var(--color-primary); text-decoration: underline; }
-.legal a:hover, .legal a:focus { color: var(--color-primary); }
+.legal a { color: var(--color-accent); text-decoration: underline; }
+.legal a:hover, .legal a:focus { color: var(--color-accent-hover); }
 
 .legal .muted {
   font-size: 14px;
-  color: #6d6a75;
-  color: color-mix(in srgb, var(--color-text) 62%, transparent);
+  color: #a3a698;
+  color: color-mix(in srgb, var(--color-text) 68%, transparent);
 }
 
 /* Entwurfs-Markierung: fliegt raus, sobald Francisco bestaetigt hat */
