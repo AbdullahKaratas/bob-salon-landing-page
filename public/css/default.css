@@ -37,15 +37,15 @@ e. Others
  ------------------------------------------------------------------ */
 
 :root {
-   /* Graphit & Flieder */
-   --color-primary:      #1b1a1f; /* dunkler Grundton: body, Navi, Footer, Buttons */
-   --color-surface:      #f1efec; /* heller Sektionshintergrund (ueber bob-salon) */
-   --color-surface-alt:  #e9e6e1; /* zweiter heller Sektionshintergrund (Preisliste, Kontakt) */
-   --color-accent:       #c3b0dd; /* helles Flieder: nur auf dunklem Grund + als Button-Flaeche */
-   --color-accent-hover: #ad97cd; /* kraeftigeres Flieder: Hover auf Akzentflaechen */
-   --color-accent-deep:  #6b5688; /* dunkles Flieder: als Textfarbe auf hellen Flaechen */
-   --color-text:         #232228; /* Fliesstext */
-   --color-secondary:    #8d8896; /* Zweitakzent (derzeit ungenutzt) */
+   /* Graphit & Neonzitrus */
+   --color-primary:      #1a1b17; /* dunkler Grundton: body, Navi, Footer, Buttons */
+   --color-surface:      #f0f1ec; /* heller Sektionshintergrund (ueber bob-salon) */
+   --color-surface-alt:  #e7e9e1; /* zweiter heller Sektionshintergrund (Preisliste, Kontakt) */
+   --color-accent:       #e4ff3f; /* Neonzitrus: nur auf dunklem Grund + als Button-Flaeche */
+   --color-accent-hover: #cdea25; /* kraeftigeres Zitrus: Hover auf Akzentflaechen */
+   --color-accent-deep:  #5c6b12; /* dunkles Oliv-Zitrus: als Textfarbe auf hellen Flaechen */
+   --color-text:         #22241f; /* Fliesstext */
+   --color-secondary:    #8a8f80; /* Zweitakzent (derzeit ungenutzt) */
 }
 
 /* ------------------------------------------------------------------
