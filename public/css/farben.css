@@ -1,0 +1,48 @@
+/* ==========================================================================
+
+   FARBEN DER SEITE
+
+   Hier stehen drei Farben. Mehr muss nicht angefasst werden - alle anderen
+   Farbtöne der Seite werden daraus berechnet.
+
+   So geht es:
+     1. Diese Datei öffnen
+     2. Einen der drei Werte hinter dem Doppelpunkt austauschen
+     3. Speichern, Seite neu laden
+
+   Ein Farbwert sieht immer so aus: eine Raute, dann sechs Zeichen.
+   Zum Aussuchen zum Beispiel auf https://coolors.co
+
+   ==========================================================================
+
+   WICHTIG: Hintergrund und Schrift müssen deutlich unterschiedlich hell sein,
+   sonst kann man nichts mehr lesen. Aktuell ist der Hintergrund sehr dunkel
+   und die Schrift hell. Das darf gerne so bleiben.
+
+   Wer den Hintergrund hell machen möchte, muss auch die Schrift dunkel machen
+   UND die Akzentfarbe dunkler wählen - ein helles Neon verschwindet auf
+   hellem Grund.
+
+   ========================================================================== */
+
+:root {
+
+  /* Der Hintergrund der ganzen Seite. Sehr dunkles Graphit. */
+  --grundfarbe: #131410;
+
+  /* Die Akzentfarbe. Überschriften, Preise, Links, der Senden-Knopf.
+     Muss deutlich heller sein als der Hintergrund.
+
+     Ein paar Alternativen zum Ausprobieren:
+       Neonzitrus (jetzt)  #e4ff3f
+       Neonpink            #ff4fa3
+       Neonorange          #ff7a29
+       Türkis              #3fffd8
+       Warmes Gold         #e8c24a
+  */
+  --akzent: #e4ff3f;
+
+  /* Die normale Schriftfarbe für Fließtext. */
+  --schrift: #e6e8dd;
+
+}

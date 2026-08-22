@@ -1067,7 +1067,7 @@ call-to-action .button {
 footer {
    padding-top: 48px;
    padding-bottom: 48px;
-   color: var(--color-surface);
+   color: var(--color-text);
    font-size: 14px;
    text-align: center;
    position: relative;
@@ -1076,7 +1076,6 @@ footer {
 
 footer a, footer a:visited { color: var(--color-accent); }
 footer a:hover, footer a:focus { color: var(--color-accent-hover); }
-footer a:hover, footer a:focus { color: #fff; }
 
 /* copyright */
 footer .copyright {

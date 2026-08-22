@@ -26,6 +26,7 @@ e. Others
 /* a. Webfonts and Icon fonts
  ------------------------------------------------------------------ */
 
+@import url("farben.css");
 @import url("fonts.css");
 @import url("fontello/css/fontello.css");
 @import url("font-awesome/css/font-awesome.min.css");
@@ -37,17 +38,40 @@ e. Others
  ------------------------------------------------------------------ */
 
 :root {
-   /* Graphit & Neonzitrus, durchgehend dunkel.
-      Der helle Grund war der Grund, warum Neon nicht getragen hat: bei
-      gleicher Helligkeit wie das Papier bleibt nur ein stumpfes Oliv. Auf
-      dunklem Grund ist Neon einfach Schriftfarbe - 15:1, ohne Umwege. */
-   --color-primary:      #131410; /* tiefster Ton: body, Navi, Footer */
-   --color-surface:      #1b1c17; /* Sektionsflaeche (ueber bob-salon, galerie) */
-   --color-surface-alt:  #212319; /* zweite Sektionsflaeche (Preisliste, Kontakt) */
-   --color-accent:       #e4ff3f; /* Neonzitrus, jetzt ueberall als Schriftfarbe nutzbar */
-   --color-accent-hover: #cdea25; /* kraeftigeres Zitrus fuer Hover */
-   --color-text:         #e6e8dd; /* Fliesstext, leicht ins Gruene gebrochen */
-   --color-secondary:    #8a8f80; /* gedaempft, fuer Nebensaechliches */
+   /* Diese Werte werden aus den drei Farben in farben.css berechnet.
+      Hier muss nichts geaendert werden - zum Umfaerben reicht farben.css.
+
+      Jede Zeile steht doppelt: zuerst ein fester Wert als Rueckfallebene fuer
+      sehr alte Browser, darunter die Berechnung. Neuere Browser nehmen die
+      zweite Zeile, aeltere bleiben beim festen Wert. */
+
+   /* Tiefster Ton: body, Navigation, Fusszeile */
+   --color-primary:      #131410;
+   --color-primary:      var(--grundfarbe);
+
+   /* Sektionsflaeche, eine Spur aufgehellt: ueber bob-salon, Galerie */
+   --color-surface:      #1e1f1a;
+   --color-surface:      color-mix(in srgb, var(--grundfarbe) 95%, var(--schrift));
+
+   /* Zweite Sektionsflaeche, noch etwas heller: Preisliste, Kontakt */
+   --color-surface-alt:  #22231e;
+   --color-surface-alt:  color-mix(in srgb, var(--grundfarbe) 93%, var(--schrift));
+
+   /* Akzent */
+   --color-accent:       #e4ff3f;
+   --color-accent:       var(--akzent);
+
+   /* Akzent beim Ueberfahren mit der Maus, etwas abgedunkelt */
+   --color-accent-hover: #c9e037;
+   --color-accent-hover: color-mix(in srgb, var(--akzent) 88%, black);
+
+   /* Fliesstext */
+   --color-text:         #e6e8dd;
+   --color-text:         var(--schrift);
+
+   /* Gedaempft, fuer Nebensaechliches */
+   --color-secondary:    #a2a49a;
+   --color-secondary:    color-mix(in srgb, var(--schrift) 68%, var(--grundfarbe));
 }
 
 /* ------------------------------------------------------------------
