@@ -1,10 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="bob salon">
   <!-- Das Seitensymbol: die Wortmarke in Neongelb auf dem moosigen Grund.
        Farben wie in public/css/farben.css - bei einem Farbwechsel hier
-       mit austauschen. -->
-  <rect width="64" height="64" rx="13" fill="#1d2417"/>
+       mit austauschen.
+
+       Die Flaeche geht bis an den Rand, ohne abgerundete Ecken. Runde Ecken
+       waeren durchsichtig, und beim Umwandeln in die .ico-Datei wird aus
+       Durchsichtigkeit leicht Weiss - genau das waren die hellen Ecken im
+       Browser-Tab. Die Betriebssysteme runden das Symbol ohnehin selbst ab,
+       wo sie es runden wollen. -->
+  <rect width="64" height="64" fill="#1d2417"/>
   <text x="32" y="43.5"
         font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
-        font-size="29" font-weight="700" letter-spacing="-1.4"
+        font-size="32" font-weight="700" letter-spacing="-1.2"
         text-anchor="middle" fill="#e4ff3f">bob</text>
 </svg>
