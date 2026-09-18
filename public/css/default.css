@@ -46,16 +46,16 @@ e. Others
       zweite Zeile, aeltere bleiben beim festen Wert. */
 
    /* Tiefster Ton: body, Navigation, Fusszeile */
-   --color-primary:      #131410;
+   --color-primary:      #1d2417;
    --color-primary:      var(--grundfarbe);
 
    /* Sektionsflaeche, eine Spur aufgehellt: ueber bob-salon, Galerie */
-   --color-surface:      #1e1f1a;
-   --color-surface:      color-mix(in srgb, var(--grundfarbe) 95%, var(--schrift));
+   --color-surface:      #262d1f;
+   --color-surface:      color-mix(in srgb, var(--grundfarbe) 94%, var(--schrift));
 
    /* Zweite Sektionsflaeche, noch etwas heller: Preisliste, Kontakt */
-   --color-surface-alt:  #22231e;
-   --color-surface-alt:  color-mix(in srgb, var(--grundfarbe) 93%, var(--schrift));
+   --color-surface-alt:  #303628;
+   --color-surface-alt:  color-mix(in srgb, var(--grundfarbe) 88%, var(--schrift));
 
    /* Akzent */
    --color-accent:       #e4ff3f;
@@ -66,12 +66,43 @@ e. Others
    --color-accent-hover: color-mix(in srgb, var(--akzent) 88%, black);
 
    /* Fliesstext */
-   --color-text:         #e6e8dd;
+   --color-text:         #f1efe3;
    --color-text:         var(--schrift);
 
    /* Gedaempft, fuer Nebensaechliches */
-   --color-secondary:    #a2a49a;
+   --color-secondary:    #aeada1;
    --color-secondary:    color-mix(in srgb, var(--schrift) 68%, var(--grundfarbe));
+
+   /* Feine Trennlinien und Rahmen */
+   --color-line:         #464c3d;
+   --color-line:         color-mix(in srgb, var(--schrift) 22%, var(--grundfarbe));
+}
+
+/* ------------------------------------------------------------------ */
+/* Schriften (bob salon)
+      Die ganze Seite kommt mit zwei Schriften aus:
+
+      --schrift-titel   Libre Baskerville, mit Serifen.
+                        Fuer alle Ueberschriften und die Leistungen
+                        in der Preisliste.
+
+      --schrift-text    Open Sans, ohne Serifen.
+                        Fuer Fliesstext, Navigation, Formular, Kleingedrucktes.
+
+      Mehr Schriften sollen es nicht werden - sonst wirkt die Seite unruhig.
+ ------------------------------------------------------------------ */
+
+:root {
+   --schrift-titel:        'librebaskerville-regular', Georgia, serif;
+   --schrift-titel-fett:   'librebaskerville-bold', Georgia, serif;
+   --schrift-titel-kursiv: 'librebaskerville-italic', Georgia, serif;
+
+   --schrift-text:         'opensans-regular', 'Helvetica Neue', sans-serif;
+   --schrift-text-fett:    'opensans-bold', 'Helvetica Neue', sans-serif;
+
+   /* Die Staerke des Strichs unter den Ueberschriften.
+      Ueberall dieselbe - wer ihn kraeftiger mag, aendert nur diesen Wert. */
+   --strich-staerke: 2px;
 }
 
 /* ------------------------------------------------------------------
@@ -187,7 +218,7 @@ html {
 
 body {
    background: #fff;
-   font-family: 'opensans-regular', sans-serif;
+   font-family: var(--schrift-text);
    font-weight: normal;
    font-size: 15px;
    line-height: 30px;
@@ -199,33 +230,36 @@ body {
 
 /*  2. Typography
        Vertical rhythm with leading derived from 6
+
+       Ueberschriften: Serifenschrift (Libre Baskerville)
+       Fliesstext:     Open Sans
 --------------------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
    color: #313131;
-	font-family: 'opensans-bold', sans-serif;
+	font-family: var(--schrift-titel);
    font-weight: normal;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
-h1 { font-size: 38px; line-height: 42px; margin-bottom: 12px; letter-spacing: -1px; }
-h2 { font-size: 28px; line-height: 36px; margin-bottom: 6px; }
-h3 { font-size: 22px; line-height: 30px; margin-bottom: 12px; }
-h4 { font-size: 20px; line-height: 30px; margin-bottom: 6px; }
-h5 { font-size: 18px; line-height: 30px; }
+h1 { font-size: 34px; line-height: 44px; margin-bottom: 12px; letter-spacing: 0; }
+h2 { font-size: 26px; line-height: 36px; margin-bottom: 6px; }
+h3 { font-size: 21px; line-height: 32px; margin-bottom: 12px; }
+h4 { font-size: 19px; line-height: 30px; margin-bottom: 6px; }
+h5 { font-size: 17px; line-height: 30px; }
 h6 { font-size: 14px; line-height: 30px; }
 .subheader { }
 
 p { margin: 0 0 30px 0; }
 p img { margin: 0; }
 p.lead {
-   font: 19px/36px 'opensans-light', sans-serif;
+   font: 18px/34px var(--schrift-text);
    margin-bottom: 18px;
 }
 
 /* for 'em' and 'strong' tags, font-size and line-height should be same with
 the body tag due to rendering problems in some browsers */
 em { font: 15px/30px 'opensans-italic', sans-serif; }
-strong, b { font: 15px/30px 'opensans-bold', sans-serif; }
+strong, b { font: 15px/30px var(--schrift-text-fett); }
 small { font-size: 11px; line-height: inherit; }
 
 /*	Blockquotes */
@@ -303,7 +337,7 @@ blockquote cite a:visited { color: #8B9798; border: none }
 
 /* Abbreviations */
 abbr {
-   font-family: 'opensans-bold', sans-serif;
+   font-family: var(--schrift-text-fett);
 	font-variant: small-caps;
 	text-transform: lowercase;
    letter-spacing: .5px;
@@ -317,7 +351,7 @@ abbr:hover { cursor: help; }
 	margin: 0;
 	padding: 14px 6px 0 0;
 	font-size: 84px;
-	font-family: /* Copperplate */ 'opensans-bold', sans-serif;
+	font-family: /* Copperplate */ var(--schrift-text-fett);
    line-height: 60px;
 	text-indent: 0;
 	background: transparent;
@@ -388,7 +422,7 @@ li p { }
 .stats-tabs li a {
 	display: inline-block;
 	font-size: 22px;
-	font-family: 'opensans-bold', sans-serif;
+	font-family: var(--schrift-text-fett);
    border: none;
    color: #313131;
 }
@@ -455,7 +489,7 @@ dd { margin: 0 0 0 20px; }
    padding: 0;
 }
 .pagination .page-numbers {
-   font: 15px/18px 'opensans-bold', sans-serif;
+   font: 15px/18px var(--schrift-text-fett);
    display: inline-block;
    padding: 6px 10px;
    margin-right: 3px;
@@ -507,7 +541,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-   font: 16px/30px 'opensans-bold', sans-serif;
+   font: 16px/30px var(--schrift-text-fett);
    background: var(--color-primary);
    display: inline-block;
 	text-decoration: none;
@@ -608,7 +642,7 @@ textarea { min-height: 220px; }
 
 label,
 legend {
-   font: 16px/24px 'opensans-bold', sans-serif;
+   font: 16px/24px var(--schrift-text-fett);
 	margin: 12px 0;
    color: #3d4145;
    display: block;

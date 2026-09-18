@@ -1,124 +1,60 @@
 import React, { Component } from "react";
-import hmeImg from "../images/home.jpg"
-import hmeImgMobil from "../images/hmgImgMobilCut.png"
-import MediaQuery from 'react-responsive'
+import { startbild, startbildMobil } from "../images/bilder";
+
+const menue = [
+  { ziel: "#home", text: "home" },
+  { ziel: "#about", text: "über bob-salon" },
+  { ziel: "#resume", text: "preisliste" },
+  { ziel: "#portfolio", text: "galerie" },
+  { ziel: "#contact", text: "kontakt" },
+];
 
 class Header extends Component {
   render() {
     if (!this.props.data) return null;
 
     return (
-      <div>
-        <MediaQuery maxWidth={1224}>
-          <header id="home" style={{ backgroundImage: `url(${hmeImgMobil})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            backgroundSize: 'cover'}} >
-              {/* <ParticlesBg type="circle" bg={true} /> */}
+      <header id="home">
+        {/* Das Startfoto liegt als eigenes Bild hinter dem Schriftzug.
+            Welches Foto das ist, steht in src/images/bilder.js. */}
+        <picture className="hero-bild">
+          <source media="(max-width: 767px)" srcSet={startbildMobil} />
+          <img src={startbild} alt="" />
+        </picture>
+        <div className="hero-schleier" />
 
-              <nav id="nav-wrap">
-                <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
-                  Show navigation
+        <nav id="nav-wrap">
+          <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
+            Show navigation
+          </a>
+          <a className="mobile-btn" href="#home" title="Hide navigation">
+            Hide navigation
+          </a>
+
+          <ul id="nav" className="nav">
+            {menue.map((punkt, i) => (
+              <li className={i === 0 ? "current" : ""} key={punkt.ziel}>
+                <a className="smoothscroll" href={punkt.ziel}>
+                  {punkt.text}
                 </a>
-                <a className="mobile-btn" href="#home" title="Hide navigation">
-                  Hide navigation
-                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-                <ul id="nav" className="nav">
-                  <li className="current">
-                    <a className="smoothscroll" href="#home">
-                      Home
-                    </a>
-                  </li>
+        <div className="banner">
+          <div className="banner-text">
+            <h1 className="wortmarke">bob</h1>
+            <p className="wortmarke-name">francisco guerrero lopera</p>
+          </div>
+        </div>
 
-                  <li>
-                    <a className="smoothscroll" href="#about">
-                      über bob-salon
-                    </a>
-                  </li>
-
-                  <li>
-                    <a className="smoothscroll" href="#resume">
-                      Preisliste
-                    </a>
-                  </li>
-
-                  <li>
-                    <a className="smoothscroll" href="#portfolio">
-                      Galerie
-                    </a>
-                  </li>
-
-                  <li>
-                    <a className="smoothscroll" href="#contact">
-                      Kontakt
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-              <p className="scrolldown">
-                <a className="smoothscroll" href="#about">
-                  <i className="icon-down-circle"></i>
-                </a>
-              </p>
-            </header>
-        </MediaQuery>
-        <MediaQuery minWidth={1224}>
-        <header id="home" style={{ backgroundImage: `url(${hmeImg})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            backgroundSize: 'cover'}} >
-              {/* <ParticlesBg type="circle" bg={true} /> */}
-
-              <nav id="nav-wrap">
-                <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
-                  Show navigation
-                </a>
-                <a className="mobile-btn" href="#home" title="Hide navigation">
-                  Hide navigation
-                </a>
-
-                <ul id="nav" className="nav">
-                  <li className="current">
-                    <a className="smoothscroll" href="#home">
-                      Home
-                    </a>
-                  </li>
-
-                  <li>
-                    <a className="smoothscroll" href="#about">
-                      über bob-salon
-                    </a>
-                  </li>
-
-                  <li>
-                    <a className="smoothscroll" href="#resume">
-                      Preisliste
-                    </a>
-                  </li>
-
-                  <li>
-                    <a className="smoothscroll" href="#portfolio">
-                      Galerie
-                    </a>
-                  </li>
-
-                  <li>
-                    <a className="smoothscroll" href="#contact">
-                      Kontakt
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-
-              <p className="scrolldown">
-                <a className="smoothscroll" href="#about">
-                  <i className="icon-down-circle"></i>
-                </a>
-              </p>
-            </header>
-        </MediaQuery>
-      </div>
+        <p className="scrolldown">
+          <a className="smoothscroll" href="#about">
+            <i className="icon-down-circle"></i>
+          </a>
+        </p>
+      </header>
     );
   }
 }

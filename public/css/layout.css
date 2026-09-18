@@ -38,49 +38,80 @@ header {
    height: 800px;
    min-height: 500px;
    width: 100%;
-   
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
    text-align: center;
    overflow: hidden;
+   background: var(--color-primary);
 }
 
-/* vertically center banner section */
-header:before {
-   content: '';
-   display: inline-block;
-   vertical-align: middle;
+/* Das Startfoto.
+   Es liegt als eigenes Bild hinter dem Schriftzug und wird leicht
+   aufgehellt, damit der Einstieg nicht duester wirkt. */
+header .hero-bild {
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
    height: 100%;
+   display: block;
+   z-index: 0;
 }
+header .hero-bild img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+   display: block;
+   filter: brightness(1.12) saturate(1.05);
+}
+
+/* Ein sehr weicher Schleier ueber dem Foto. Er nimmt dem Bild oben und
+   unten etwas Helligkeit, damit Navigation und Schriftzug lesbar bleiben -
+   in der Mitte bleibt das Foto fast unberuehrt. */
+header .hero-schleier {
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 1;
+   background: linear-gradient(
+      to bottom,
+      rgba(29, 36, 23, .70) 0%,
+      rgba(29, 36, 23, .28) 32%,
+      rgba(29, 36, 23, .28) 68%,
+      rgba(29, 36, 23, .70) 100%
+   );
+}
+
 header .banner {
-   display: inline-block;
-   vertical-align: middle;
+   position: relative;
+   z-index: 2;
    margin: 0 auto;
    width: 85%;
-   padding-bottom: 30px;
    text-align: center;
 }
 
 header .banner-text { width: 100%; }
-header .banner-text h1 {
-   font: 90px/1.1em 'opensans-bold', sans-serif;
-   color: #fff;
-   letter-spacing: -2px;
-   margin: 0 auto 18px auto;
+
+/* Die Wortmarke: "bob" mit dem Namen darunter, beides in der Akzentfarbe. */
+header .banner-text .wortmarke {
+   font: 120px/1em var(--schrift-text-fett);
+   color: var(--color-accent);
+   letter-spacing: -3px;
+   margin: 0 auto 6px auto;
+   text-shadow: 0 2px 24px rgba(20, 25, 16, .55);
 }
-header .banner-text h3 {
-   font: 18px/1.9em 'librebaskerville-regular', serif;
-   color: #ddd;
+header .banner-text .wortmarke-name {
+   font: 26px/1.3em var(--schrift-text-fett);
+   color: var(--color-accent);
+   letter-spacing: 1px;
    margin: 0 auto;
-   width: 70%;
-}
-header .banner-text h3 span,
-header .banner-text h3 a {
-   color: #fff;
-}
-header .banner-text hr {
-   width: 60%;
-   margin: 18px auto 24px auto;
-   border-color: #2F2D2E;
-   border-color: rgba(150, 150, 150, .1);
+   text-shadow: 0 2px 18px rgba(20, 25, 16, .55);
 }
 
 /* header social links */
@@ -100,16 +131,16 @@ header .social li a:hover { color: var(--color-accent); }
 /* scrolldown link */
 header .scrolldown a {
    position: absolute;
+   z-index: 2;
    bottom: 30px;
    left: 50%;
    margin-left: -29px;
-   color: #fff;
    display: block;
    height: 42px;
    width: 42px;
    font-size: 42px;
    line-height: 42px;
-   color: #fff;
+   color: var(--color-text);
    border-radius: 100%;
 
    -webkit-transition: all .3s ease-in-out;
@@ -130,7 +161,7 @@ header .scrolldown a:hover { color: var(--color-accent); }
 
 /* nav-wrap */
 #nav-wrap {
-   font: 12px 'opensans-bold', sans-serif;
+   font: 12px var(--schrift-text-fett);
    width: 100%;
    text-transform: lowercase;
    letter-spacing: 2.5px;
@@ -169,7 +200,7 @@ ul#nav li a {
    line-height: 32px;
 	text-decoration: none;
    text-align: left;
-   color: var(--color-accent);
+   color: var(--color-text);
 
 	-webkit-transition: color .2s ease-in-out;
 	-moz-transition: color .2s ease-in-out;
@@ -178,9 +209,9 @@ ul#nav li a {
 	transition: color .2s ease-in-out;
 }
 
-ul#nav li a:hover, ul#nav li a:focus { color: #fff; }
+ul#nav li a:hover, ul#nav li a:focus { color: var(--color-accent); }
 ul#nav li a:active { background-color: transparent !important; }
-ul#nav li.current a { color: #fff; }
+ul#nav li.current a { color: var(--color-accent); }
 
 
 /* ------------------------------------------------------------------ */
@@ -197,42 +228,39 @@ ul#nav li.current a { color: #fff; }
 #about a, #about a:visited  { color: var(--color-accent); }
 #about a:hover, #about a:focus { color: var(--color-accent-hover); text-decoration: underline; }
 
+/* Ueberschriften: Serifenschrift, feiner Strich darunter.
+   Die Strichstaerke steht zentral in --strich-staerke (siehe unten). */
 #about h2 {
    display: inline-block;
-   font: 22px/30px 'opensans-bold', sans-serif;
+   font: 26px/34px var(--schrift-titel);
    color: var(--color-accent);
-   border-bottom: 6px solid var(--color-accent);
-   padding-bottom: 2px;
-   margin-bottom: 12px;
+   border-bottom: var(--strich-staerke) solid var(--color-accent);
+   padding-bottom: 6px;
+   margin: 0 0 18px 0;
 }
 #about p {
    line-height: 30px;
    color: var(--color-text);
+   /* Kuerzere Zeilen lesen sich ruhiger als eine Zeile ueber die
+      ganze Spaltenbreite. */
+   max-width: 36em;
 }
-#about .profile-pic {
-   position: relative;
-   width: 120px;
-   height: 120px;
-   border-radius: 100%;
+
+/* Die Fotospalte beginnt exakt auf der Hoehe der Ueberschrift daneben. */
+#about .about-bilder { padding-top: 4px; }
+#about .about-bilder img {
+   display: block;
+   width: 100%;
+   height: auto;
+   border-radius: 12px;
+   /* Die vorhandenen Aufnahmen sind sehr dunkel - hier etwas aufgehellt. */
+   filter: brightness(1.14) contrast(.96);
 }
-#about .contact-details { width: 41.66667%; }
-#about .download {
-   width: 58.33333%;
-   padding-top: 6px;
-}
+#about .about-portrait { margin-bottom: 24px; }
+
+#about .contact-details { margin-top: 12px; }
+#about .contact-details .address { margin-bottom: 0; }
 #about .main-col { padding-right: 5%; }
-#about .download .button {
-   margin-top: 6px;
-   background: var(--color-primary);
-}
-#about .download .button:hover {
-   background: var(--color-accent);
-   color: var(--color-primary);
-}
-#about .download .button i {
-   margin-right: 15px;
-   font-size: 20px;
-}
 
 
 /* ------------------------------------------------------------------ */
@@ -250,29 +278,32 @@ ul#nav li.current a { color: #fff; }
 #resume a:hover, #resume a:focus { color: var(--color-accent-hover); text-decoration: underline; }
 
 #resume h1 {
-   font: 18px/24px 'opensans-bold', sans-serif;
+   font: 24px/32px var(--schrift-titel);
    text-transform: lowercase;
-   letter-spacing: 1px;
-   color: var(--color-text);
+   letter-spacing: 0;
+   color: var(--color-accent);
+   margin: 0;
 }
 #resume h1 span {
-   border-bottom: 3px solid var(--color-accent);
+   border-bottom: var(--strich-staerke) solid var(--color-accent);
    padding-bottom: 6px;
 }
 #resume h3 {
-   font: 25px/30px 'opensans-bold', sans-serif;
+   font: 24px/32px var(--schrift-titel);
    color: var(--color-text);
 }
 
-#resume .header-col { padding-top: 9px; }
+/* Die Ueberschrift links und die erste Zeile rechts starten auf
+   derselben Hoehe - beide Spalten beginnen oben buendig. */
+#resume .header-col { padding-top: 0; }
 #resume .main-col { padding-right: 10%; }
 
 /* price blocks (Preisliste) */
 #resume .price-block {
    margin-bottom: 48px;
    padding-bottom: 30px;
-   border-bottom: 1px solid #3a3c33; /* Fallback fuer alte Browser */
-   border-bottom: 1px solid color-mix(in srgb, var(--color-text) 20%, transparent);
+   border-bottom: 1px solid #464c3d; /* Fallback fuer alte Browser */
+   border-bottom: 1px solid var(--color-line);
 }
 #resume .price-block-last {
    margin-bottom: 24px;
@@ -284,11 +315,11 @@ ul#nav li.current a { color: #fff; }
 #resume .price-group:last-child { margin-bottom: 0; }
 
 #resume .price-group-title {
-   font: 13px/20px 'opensans-bold', sans-serif;
+   font: 13px/20px var(--schrift-text-fett);
    text-transform: lowercase;
    letter-spacing: 2px;
-   color: var(--color-accent);
-   margin-bottom: 15px;
+   color: var(--color-secondary);
+   margin: 0 0 15px 0;
 }
 
 #resume .price-list {
@@ -306,7 +337,7 @@ ul#nav li.current a { color: #fff; }
 #resume .price-item:last-child { margin-bottom: 0; }
 
 #resume .price-item-name {
-   font: 16px/24px 'librebaskerville-regular', serif;
+   font: 16px/24px var(--schrift-titel);
    color: var(--color-text);
 }
 #resume .price-item-dots {
@@ -318,21 +349,21 @@ ul#nav li.current a { color: #fff; }
    transform: translateY(-5px);
 }
 #resume .price-item-price {
-   font: 15px/24px 'opensans-bold', sans-serif;
+   font: 15px/24px var(--schrift-text-fett);
    color: var(--color-accent);
    white-space: nowrap;
 }
 
 #resume .price-note {
-   font: 13px/22px 'opensans-regular', sans-serif;
-   color: #a3a698; /* Fallback fuer alte Browser */
-   color: color-mix(in srgb, var(--color-text) 68%, transparent);
+   font: 13px/22px var(--schrift-text);
+   color: #aeada1; /* Fallback fuer alte Browser */
+   color: var(--color-secondary);
    margin: 22px 0 0 0;
 }
 #resume .price-footnote {
-   font: 13px/22px 'opensans-regular', sans-serif;
-   color: #a3a698; /* Fallback fuer alte Browser */
-   color: color-mix(in srgb, var(--color-text) 68%, transparent);
+   font: 13px/22px var(--schrift-text);
+   color: #aeada1; /* Fallback fuer alte Browser */
+   color: var(--color-secondary);
    text-align: center;
    margin: 0;
 }
@@ -472,18 +503,30 @@ ul#nav li.current a { color: #fff; }
 /* e. Portfolio Section
 /* ------------------------------------------------------------------ */
 
+/* Die Galerie laeuft ohne Rand von Kante zu Kante.
+   Ein Innenabstand wuerde hier als andersfarbiger Streifen ueber und unter
+   den Fotos stehen, weil die Nachbarsektionen eine andere Flaeche haben -
+   deshalb kein Abstand, und dieselbe Flaechenfarbe wie die Nachbarn. */
 #portfolio {
-   background: var(--color-surface);
-   padding-top: 48px;
-   padding-bottom: 48px;
+   background: var(--color-surface-alt);
+   padding-top: 0;
+   padding-bottom: 0;
+   line-height: 0; /* schluckt die Zeilenhoehe unter dem Slider */
 }
 #portfolio h1 {
-   font: 15px/24px 'opensans-semibold', sans-serif;
+   font: 24px/32px var(--schrift-titel);
    text-transform: lowercase;
-   letter-spacing: 1px;
+   letter-spacing: 0;
    text-align: center;
    padding-bottom: 0px;
-   color: var(--color-primary);
+   color: var(--color-accent);
+}
+
+/* Die vorhandenen Galeriefotos sind sehr dunkel - hier etwas aufgehellt,
+   damit die Galerie nicht duester wirkt. */
+#portfolio .awssld__content > div,
+#portfolio .awssld__content img {
+   filter: brightness(1.14) contrast(.96);
 }
 
 /* Portfolio Content */
@@ -861,72 +904,86 @@ call-to-action .button {
 #contact a:hover, #contact a:focus { color: var(--color-accent-hover); text-decoration: underline; }
 
 #contact h1 {
-   font: 18px/24px 'opensans-bold', sans-serif;
+   font: 24px/32px var(--schrift-titel);
    text-transform: lowercase;
-   letter-spacing: 3px;
-   color: var(--color-text);
-   margin-bottom: 6px;
-}
-#contact h1 span { display: none; }
-#contact h1:before {
-   font-family: 'FontAwesome';
-   content: "\f0e0";
-	padding-right: 10px;
-	font-size: 72px;
-   line-height: 72px;
-   text-align: left;
-   float: left;
+   letter-spacing: 0;
    color: var(--color-accent);
+   margin: 0;
+}
+#contact h1 span {
+   border-bottom: var(--strich-staerke) solid var(--color-accent);
+   padding-bottom: 6px;
 }
 
 #contact h4 {
-   font: 16px/24px 'opensans-bold', sans-serif;
+   font: 19px/28px var(--schrift-titel);
    color: var(--color-accent);
    margin-bottom: 6px;
 }
 #contact p.lead {
-   font: 18px/36px 'opensans-light', sans-serif;
+   font: 18px/34px var(--schrift-text);
+   color: var(--color-text);
+   margin: 0;
    padding-right: 3%;
 }
 #contact p.lead span { color: var(--color-text); }
-#contact .header-col { padding-top: 6px; }
+
+/* Ueberschrift links und Text rechts starten auf derselben Hoehe. */
+#contact .header-col { padding-top: 0; }
 
 
-/* contact form */
+/* contact form
+   Die Felder kommen von MUI. Damit Beschriftung, einzeiliges Feld und
+   das mehrzeilige Nachrichtenfeld exakt an derselben Kante stehen, wird
+   der aeussere Rahmen von MUI gestylt - nicht das Eingabefeld darin. */
 #contact form { margin-bottom: 30px; }
 #contact label {
-   font: 15px/24px 'opensans-bold', sans-serif;
-   margin: 12px 0;
-   color: var(--color-accent);
-   display: inline-block;
+   font: 15px/24px var(--schrift-text-fett);
+   margin: 0 0 10px 0;
+   color: var(--color-text);
+   display: block;
    float: none;
    width: auto;
 }
-#contact input,
-#contact textarea,
-#contact select {
-   padding: 10px 20px;
-	color: var(--color-text);
-	background: rgba(255, 255, 255, .04);
-	margin-bottom: 42px;
-	outline: none;
-   font-size: 15px;
-   line-height: 24px;
+
+#contact .MuiFormControl-root {
    width: 65%;
+   margin: 0 0 36px 0;
+   display: block;
+}
+#contact .MuiOutlinedInput-root {
+   width: 100%;
+   padding: 0;
+   background: rgba(255, 255, 255, .04);
    border-radius: 12px;
-   border-color: rgba(230, 232, 221, .35);
-   border-style: solid;
-   border-width: 1px;
+   border: 1px solid #5c6152;
+   border: 1px solid var(--color-line);
+   transition: border-color .2s ease, background-color .2s ease;
 }
-#contact input:focus,
-#contact textarea:focus,
-#contact select:focus {
-	color: var(--color-text);
-	background-color: rgba(255, 255, 255, .07);
+#contact .MuiOutlinedInput-root.Mui-focused {
+   background: rgba(255, 255, 255, .07);
    border-color: var(--color-accent);
-   border-width: 2px;
 }
+#contact .MuiOutlinedInput-input,
+#contact .MuiInputBase-inputMultiline {
+   padding: 12px 20px;
+   margin: 0;
+   color: var(--color-text);
+   font: 15px/24px var(--schrift-text);
+   background: transparent;
+   border: none;
+   outline: none;
+   width: 100%;
+}
+#contact .MuiInputBase-inputMultiline { min-height: 168px; }
+/* Ladebalken und Rueckmeldungen stehen auf derselben Kante wie die Felder. */
+#contact .form-status {
+   width: 65%;
+   margin: 0;
+}
+
 #contact button.submit {
+   font: 16px/24px var(--schrift-text-fett);
 	text-transform: lowercase;
 	letter-spacing: 3px;
 	color: var(--color-primary);
@@ -948,9 +1005,9 @@ call-to-action .button {
 #contact .form-privacy {
    margin: 18px 0 0 0;
    max-width: 34em;
-   font: 13px/1.6 'opensans-regular', sans-serif;
-   color: #a3a698; /* Fallback fuer alte Browser */
-   color: color-mix(in srgb, var(--color-text) 68%, transparent);
+   font: 13px/1.6 var(--schrift-text);
+   color: #aeada1; /* Fallback fuer alte Browser */
+   color: var(--color-secondary);
 }
 #contact .form-privacy a { text-decoration: underline; }
 

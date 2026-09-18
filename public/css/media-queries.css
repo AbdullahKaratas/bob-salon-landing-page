@@ -13,11 +13,11 @@
 
     /* header styles
    ------------------------------------------------------------------ */
-   header .banner-text h1 {
-      font: 80px/1.1em 'opensans-bold', sans-serif;
-      letter-spacing: -1px;
-      margin: 0 auto 12px auto;
+   header .banner-text .wortmarke {
+      font-size: 100px;
+      letter-spacing: -2px;
    }
+   header .banner-text .wortmarke-name { font-size: 22px; }
 
 }
 
@@ -27,40 +27,23 @@
 
     /* header styles
    ------------------------------------------------------------------ */
-   header .banner { padding-bottom: 12px; }
-   header .banner-text h1 {
-      font: 78px/1.1em 'opensans-bold', sans-serif;
-      letter-spacing: -1px;      
+   header .banner-text .wortmarke {
+      font-size: 84px;
+      letter-spacing: -2px;
    }
-   header .banner-text h3 {
-      font: 17px/1.9em 'librebaskerville-regular', serif;
-      width: 80%;
-   }
-   header .banner-text hr {
-      width: 65%;
-      margin: 12px auto;
-   }
+   header .banner-text .wortmarke-name { font-size: 19px; }
+
    /* nav-wrap */
    #nav-wrap {
-      font: 11px 'opensans-bold', sans-serif;
+      font: 11px var(--schrift-text-fett);
       letter-spacing: 1.5px;
    }
 
 
-   /* About Section
-   ------------------------------------------------------------------- */
-   #about .profile-pic {
-      width: 114px;
-      height: 114px;
-      margin-left: 12px;
-   }
-   #about .contact-details { width: 50%; }
-   #about .download { width: 50%; }
-
    /* Resume Section
    ------------------------------------------------------------------- */
-   #resume h1 { font: 16px/24px 'opensans-bold', sans-serif; }
-   #resume .main-col { padding-right: 5%; }   
+   #resume h1 { font: 21px/30px var(--schrift-titel); }
+   #resume .main-col { padding-right: 5%; }
 
    /* Testimonials Section
    ------------------------------------------------------------------- */
@@ -87,7 +70,7 @@
       font-size: 66px;
       line-height: 66px;
    }
-   #contact .section-head p.lead { font: 17px/33px opensans-light, sans-serif; }
+   #contact .section-head p.lead { font: 17px/32px var(--schrift-text); }
 
 
 }
@@ -100,7 +83,7 @@
    /* mobile navigation
    -------------------------------------------------------------------- */
    #nav-wrap {
-      font: 12px 'opensans-bold', sans-serif;
+      font: 12px var(--schrift-text-fett);
       background: transparent !important;
       letter-spacing: 1.5px;  
       width: auto;
@@ -189,19 +172,12 @@
 
    /* Header Styles
    -------------------------------------------------------------------- */
-   header .banner {
-      padding-bottom: 12px;
-      padding-top: 6px;
+   header { height: 100vh; min-height: 460px; max-height: 720px; }
+   header .banner-text .wortmarke {
+      font-size: 72px;
+      letter-spacing: -2px;
    }
-   header .banner-text h1 { font: 68px/1.1em 'opensans-bold', sans-serif; }
-   header .banner-text h3 {
-      font: 16px/1.9em 'librebaskerville-regular', serif;
-      width: 85%;
-   }
-   header .banner-text hr {
-      width: 80%;
-      margin: 18px auto;
-   }
+   header .banner-text .wortmarke-name { font-size: 17px; letter-spacing: .5px; }
 
    /* header social links */
    header .social {
@@ -217,12 +193,9 @@
 
    /* About Section
    -------------------------------------------------------------------- */
-   #about .profile-pic { display: none; }
-   #about .download .button {
-      width: 100%;
-      text-align: center;
-      padding: 15px 20px;
-   }
+   #about .about-bilder { padding-top: 0; margin-bottom: 36px; }
+   #about .about-bilder img { max-width: 420px; margin: 0 auto; }
+   #about .about-portrait { margin-bottom: 18px; }
    #about .main-col { padding-right: 30px; }
 
 
@@ -233,7 +206,7 @@
       margin-bottom: 48px;
       text-align: center;
    }
-   #resume h1 { letter-spacing: 3px; }
+   #resume h1 { letter-spacing: 0; }
    #resume .main-col { padding-right: 30px; }
    #resume .price-group-title { text-align: center; }
    #resume .price-note { text-align: center; }
@@ -245,7 +218,7 @@
    /* ----------------------------------------------------------------- */
    #call-to-action { text-align: center; }
    #call-to-action h1 {
-      font: 16px/24px 'opensans-bold', sans-serif;
+      font: 16px/24px var(--schrift-text-fett);
       text-align: center;
       margin-bottom: 30px;
       text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
@@ -265,7 +238,7 @@
    ----------------------------------------------------------------------- */
    #testimonials .text-container { text-align: center; }
    #testimonials h1 {
-      font: 16px/24px 'opensans-bold', sans-serif;
+      font: 16px/24px var(--schrift-text-fett);
       text-align: center;
       margin-bottom: 30px;
       text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
@@ -290,12 +263,12 @@
    #contact { padding-bottom: 66px; }
    #contact .section-head { margin-bottom: 12px; }
    #contact .section-head h1 {
-      font: 16px/24px 'opensans-bold', sans-serif;            
-      text-align: center;   
+      font: 21px/30px var(--schrift-titel);
+      text-align: center;
       margin-bottom: 30px;
-      text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
    }  
-   #contact h1 span { display: block; }
+   /* inline-block, damit der Strich nur so breit ist wie das Wort. */
+   #contact h1 span { display: inline-block; }
    #contact .header-col { padding-top: 0; }
    #contact .header-col h1:before { content: none;	}
    #contact .section-head p.lead { text-align: center;}
@@ -305,13 +278,11 @@
       float: none;
       width: 100%;
    }
-   #contact input,
-   #contact textarea,
-   #contact select {
-     	margin-bottom: 6px;    	
+   #contact .MuiFormControl-root {
+      margin-bottom: 24px;
       width: 100%;
-      border-radius: 12px;
    }
+   #contact .form-status { width: 100%; }
    #contact button.submit { margin: 30px 0 24px 0; }
    #message-warning, #message-success {
       width: 100%;
@@ -323,7 +294,7 @@
    #reservation { padding-bottom: 66px; }
    #reservation .section-head { margin-bottom: 12px; }
    #reservation .section-head h1 {
-      font: 16px/24px 'opensans-bold', sans-serif;            
+      font: 16px/24px var(--schrift-text-fett);            
       text-align: center;   
       margin-bottom: 30px;
       text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
@@ -386,15 +357,12 @@
 
    /* header styles
    -------------------------------------------------------------------- */
-   header .banner { padding-top: 24px; }
-   header .banner-text h1 {
-      font: 40px/1.1em 'opensans-bold', sans-serif;      
-      margin: 0 auto 24px auto;
+   header .banner-text .wortmarke {
+      font-size: 56px;
+      letter-spacing: -1px;
+      margin-bottom: 4px;
    }
-   header .banner-text h3 {
-      font: 14px/1.9em 'librebaskerville-regular', sans-serif;
-      width: 90%;
-   }
+   header .banner-text .wortmarke-name { font-size: 14px; letter-spacing: .5px; }
   
    /* header social links */
    header .social { font-size: 20px;}

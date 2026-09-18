@@ -12,7 +12,6 @@
     "address": {
       "street": "Keplerstraße 42",
       "city": "Mannheim",
-      "state": "Baden-Württemberg",
       "zip": "68165"
     },
     "website": "http://www.timbakerdev.com",
@@ -84,7 +83,7 @@
                 "preis": "ab 60 €"
               },
               {
-                "leistung": "kids · 12–16 jahre",
+                "leistung": "kids & teens · 12–16 jahre",
                 "preis": "39 €"
               }
             ]
@@ -103,7 +102,7 @@
                 "preis": "ab 55 €"
               },
               {
-                "leistung": "ansatz + längen & spitzen",
+                "leistung": "ansatz & längen & spitzen",
                 "preis": "ab 85 €"
               },
               {

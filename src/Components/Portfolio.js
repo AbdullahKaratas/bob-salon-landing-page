@@ -1,20 +1,19 @@
 import React, { Component } from "react";
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
-import hand from "../images/hand.jpg"
-import innerPlace from "../images/innerplace.jpg"
-import lights from "../images/lights.jpg"
-import green from "../images/green.jpg"
+import { galerie } from "../images/bilder";
 
 class Slider extends Component {
   render() {
+    /* Noch nicht gefuellte Plaetze aus src/images/bilder.js ueberspringen. */
+    const bilder = galerie.filter(Boolean);
+
     return (
       <section id="portfolio">
-        <AwesomeSlider bullets={false} >
-          <div data-src= {hand} style={{maxHeight: '1200px'}}/>
-          <div data-src={innerPlace} style={{maxHeight: '1200px'}}/>
-          <div data-src={lights} style={{maxHeight: '1200px'}}/>
-          <div data-src={green} style={{maxHeight: '1200px'}}/>
+        <AwesomeSlider bullets={false}>
+          {bilder.map((bild, i) => (
+            <div key={i} data-src={bild} style={{ maxHeight: '1200px' }} />
+          ))}
         </AwesomeSlider>
       </section>
     );

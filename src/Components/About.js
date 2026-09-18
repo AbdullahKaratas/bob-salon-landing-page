@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Fade from "react-reveal";
-import abtImg from "../images/aboutbob.jpg"
+import { portrait, salon } from "../images/bilder";
 
 class About extends Component {
   render() {
@@ -10,7 +10,6 @@ class About extends Component {
     const bio = this.props.data.bio.toLowerCase();
     const street = this.props.data.address.street.toLowerCase();
     const city = this.props.data.address.city.toLowerCase();
-    const state = this.props.data.address.state.toLowerCase();
     const zip = this.props.data.address.zip.toLowerCase();
     const phone = this.props.data.phone.toLowerCase();
     const email = this.props.data.email.toLowerCase();
@@ -19,35 +18,35 @@ class About extends Component {
       <section id="about">
         <Fade duration={600}>
           <div className="row">
-            <div className="three columns">
-              <img
-                style={{borderRadius: '12px'}}
-                src={abtImg}
-                alt="aboutImage"
-              />
+            <div className="four columns about-bilder">
+              {/* Das Portrait erscheint nur, wenn in src/images/bilder.js
+                  eines eingetragen ist. */}
+              {portrait && (
+                <img className="about-portrait" src={portrait} alt={name} />
+              )}
+              <img className="about-salon" src={salon} alt="bob salon" />
             </div>
-            <div className="nine columns main-col">
-              <br/>
+
+            <div className="eight columns main-col">
               <h2>über bob-salon</h2>
 
               <p>{bio}</p>
-              <div className="row">
-                <div className="columns contact-details">
-                  <h2>details</h2>
-                  <p className="address">
-                    <span>{name}</span>
+
+              <div className="contact-details">
+                <h2>kontakt</h2>
+                <p className="address">
+                  <span>{name}</span>
+                  <br />
+                  <span>
+                    {street}
                     <br />
-                    <span>
-                      {street}
-                      <br />
-                      {zip} {city}, {state}
-                    </span>
-                    <br />
-                    <span>{phone}</span>
-                    <br />
-                    <span>{email}</span>
-                  </p>
-                </div>
+                    {zip} {city}
+                  </span>
+                  <br />
+                  <span>{phone}</span>
+                  <br />
+                  <span>{email}</span>
+                </p>
               </div>
             </div>
           </div>

@@ -16,7 +16,7 @@
    ==========================================================================
 
    WICHTIG: Hintergrund und Schrift müssen deutlich unterschiedlich hell sein,
-   sonst kann man nichts mehr lesen. Aktuell ist der Hintergrund sehr dunkel
+   sonst kann man nichts mehr lesen. Aktuell ist der Hintergrund dunkel
    und die Schrift hell. Das darf gerne so bleiben.
 
    Wer den Hintergrund hell machen möchte, muss auch die Schrift dunkel machen
@@ -27,8 +27,15 @@
 
 :root {
 
-  /* Der Hintergrund der ganzen Seite. Sehr dunkles Graphit. */
-  --grundfarbe: #131410;
+  /* Der Hintergrund der ganzen Seite. Ein dunkles, moosiges Grün.
+
+     Wird die Seite als zu düster empfunden, hier einen helleren Ton
+     eintragen - die Seite hellt dann überall mit auf:
+       Moos (jetzt)     #1d2417
+       Moos, heller     #242d1c
+       Moos, noch heller #2b3522
+  */
+  --grundfarbe: #1d2417;
 
   /* Die Akzentfarbe. Überschriften, Preise, Links, der Senden-Knopf.
      Muss deutlich heller sein als der Hintergrund.
@@ -42,7 +49,7 @@
   */
   --akzent: #e4ff3f;
 
-  /* Die normale Schriftfarbe für Fließtext. */
-  --schrift: #e6e8dd;
+  /* Die normale Schriftfarbe für Fließtext. Ein warmes Gebrochen-Weiß. */
+  --schrift: #f1efe3;
 
 }

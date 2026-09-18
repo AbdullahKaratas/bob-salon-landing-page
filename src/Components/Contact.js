@@ -5,14 +5,6 @@ import Alert from "@mui/material/Alert";
 import AlertTitle from "@mui/material/AlertTitle";
 import CircularProgress from "@mui/material/CircularProgress";
 import TextField from "@mui/material/TextField";
-import { withStyles } from "@mui/styles";
-
-const styles = (theme) => ({
-  rootInfo: {
-    width: "20px",
-    marginRight: "20px",
-  },
-});
 
 class Contact extends Component {
   constructor(props) {
@@ -102,8 +94,6 @@ class Contact extends Component {
   };
 
   render() {
-    const { classes } = this.props;
-
     if (!this.props.data) return null;
     const message = this.props.data.contactmessage.toLowerCase();
 
@@ -111,12 +101,12 @@ class Contact extends Component {
       <section id="contact">
         <Fade duration={600}>
           <div className="row section-head">
-            <div className="two columns header-col">
+            <div className="three columns header-col">
               <h1>
-                <span>Get In Touch.</span>
+                <span>nachricht</span>
               </h1>
             </div>
-            <div className="ten columns">
+            <div className="nine columns">
               <p className="lead">
                 <span>{message}</span>
               </p>
@@ -141,7 +131,6 @@ class Contact extends Component {
                           },
                         },
                       }}
-                      className={classes.rootInfo}
                     />
                     <label>email</label>
                     <TextField
@@ -176,11 +165,11 @@ class Contact extends Component {
                       // style={{width: '400px'}}
                     />
                     {this.state.loading === 0 ? (
-                      <div style={{ marginLeft: "27%" }}>
+                      <div className="form-status">
                         <CircularProgress />
                       </div>
                     ) : this.state.loading === 1 ? (
-                      <div style={{ marginLeft: "27%" }}>
+                      <div className="form-status">
                         <Alert
                           variant="filled"
                           severity="success"
@@ -195,7 +184,7 @@ class Contact extends Component {
                         </Alert>
                       </div>
                     ) : this.state.loading === 3 ? (
-                      <div style={{ marginLeft: "27%" }}>
+                      <div className="form-status">
                         <Alert variant="filled" severity="error">
                           <AlertTitle style={{ fontSize: "15px" }}>
                             Senden fehlgeschlagen — bitte erneut versuchen oder
@@ -224,4 +213,4 @@ class Contact extends Component {
   }
 }
 
-export default withStyles(styles)(Contact);
+export default Contact;
